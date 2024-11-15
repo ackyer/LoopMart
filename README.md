@@ -7,6 +7,5 @@
 - 💸 Exclusive deals & discounts
 - 🌟 Community-driven trends & reviews
 - 🔒 Secure, easy checkout
-- 📦 Real-time order tracking
 
 Start shopping smarter with **LoopMart**!

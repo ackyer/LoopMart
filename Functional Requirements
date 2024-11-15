@@ -44,10 +44,13 @@ This document outlines the key functional requirements for **LoopMart**, a shopp
 - **Data Privacy**: Ensure compliance with data protection regulations (e.g., GDPR, CCPA).
 - **Payment Security**: Secure payment processing with encryption and tokenization.
 
-## 9. Admin & Vendor Dashboard (Optional)
+## 9. Admin & Vendor Dashboard
 - **Inventory Management**: Allow vendors to manage product listings, inventory, and pricing.
 - **Order Fulfillment**: Provide tools for vendors to view and manage orders.
 - **Analytics & Insights**: Display insights on sales, product views, and user engagement.
+
+## 10. Chat between users (optional)
+- **Chat customer - seller**: Allow to create a chat between customers and sellers.
 
 ---
 

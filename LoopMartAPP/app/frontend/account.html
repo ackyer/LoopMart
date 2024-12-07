@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Title</title>
+    <style>
+        #loader {
+            display: block;
+            z-index: 5000;
+            height: 100vh;
+            width: 100vw;
+            background-color: #e4f0f0;
+            color: #000;
+            position: absolute;
+            top:0;
+            left: 0;
+            text-align: center;
+            padding-top: calc(50vh - 150px);
+        }
+    </style>
+</head>
+<body>
+<div id="loader">
+    <img src="images/loader.gif" style="width: 200px;"><br>
+    <div style="display: inline-block">Data is loading ...</div>
+</div>
+
+
+<h1>Welcomme back <span id="username">.....</span></h1>
+<a href="signout.html">Sign out</a>
+
+
+<script>
+    var username = "";
+    async function getAccountData() {
+        const url = "http://localhost/api/account.php";
+        try {
+            const response = await fetch(url,  {});
+            if (!response.ok) {
+                throw new Error(`Response status: ${response.status}`);
+            }
+
+            const text_response = await response.text();
+
+            if (text_response == 'Signin') {
+                //go to signin.html
+                window.location.href = "http://localhost/signin.html";
+            }
+            document.getElementById("loader").style.display = "none";
+            console.log(text_response);
+            document.getElementById('username').innerText = text_response;
+
+        } catch (error) {
+            console.error(error.message);
+        }
+    }
+
+    getAccountData();
+
+
+    document.getElementById('username').innerText = username;
+</script>
+
+</body>
+</html>

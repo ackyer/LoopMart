@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@font-face {
+    font-family: 'Montserrat Arabic'; /* Nombre para usar en CSS */
+    src: url('../fonts/Montserrat-Arabic SemiBold.ttf') format('truetype'); /* Ruta relativa y formato */
+    font-weight: 500; /* Peso de la fuente (opcional, basado en el nombre SemiBold) */
+    font-style: normal; /* Estilo normal */
+}
+
+:root {
+    --primary-color: #000000;
+    --white-color: #fff;
+    --black-color: #000000;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    padding: 1rem 2rem;
+    background-color: #fff; /* Fondo opcional */
+}
+
+.header-content {
+    display: flex; /* Alinea el logo y las opciones horizontalmente */
+    align-items: center; /* Centra verticalmente el logo y las opciones */
+    justify-content: space-between; /* Alinea todo a la izquierda */
+    gap: 0 2rem; /* Espaciado entre logo y menú */
+    margin-top: -7rem;
+    margin-left: -1.5rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 350px; /* Tamaño grande del logo */
+    width: auto;
+    display: block;
+}
+
+
+ul {
+    display: flex; /* Alinea los elementos en una fila */
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    margin-right: 3rem;
+    gap: 1.5rem; /* Espaciado entre los enlaces */
+    justify-content: flex-end;
+}
+
+li {
+    margin: 0;
+}
+.active {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+nav li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+nav li a.active {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+nav li a:hover,
+nav li a:focus {
+    color: #656565; /* Cambia el color al pasar el cursor */
+}
+
+main {
+    text-align: left;
+}
+
+h1 {
+    text-align: left;
+    font-family: 'Montserrat Arabic', sans-serif;
+    font-size: 4rem;
+    font-weight: 500;
+    width: fit-content;
+    transform: scale(1.5);
+    margin: 3rem 0 0 7rem;
+    letter-spacing: -0.07em;
+}
+
+.buttonsMain {
+    display: flex;
+    flex-direction: row; /* Alinea los botones en una columna */
+    width: 100%; /* El contenedor ocupa todo el ancho */
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 2rem;
+    padding: 0; /* Sin padding */
+    gap: 0.5rem;
+}
+
+.buttonsMain .button {
+    display: block; /* Los botones ocupan toda la fila */
+    width: calc(100% - 6rem); /* Resta 2rem para margen a los lados */
+    margin: 0 auto; /* Centra los botones */
+    padding: 1rem 0; /* Espaciado interno para hacer los botones más altos */
+    text-align: center; /* Centra el texto dentro del botón */
+    background-color: var(--white-color); /* Fondo del botón */
+    color: var(--black-color); /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado */
+    border: 1px solid var(--primary-color); /* Borde visible */
+    border-radius: 0; /* Bordes rectos */
+    box-shadow: none; /* Sin sombra */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Efecto suave */
+}
+
+.buttonsMain .button:hover {
+    background-color: rgb(0, 0, 0); /* Fondo transparente en hover */
+    color: var(--white-color); /* Cambia el texto al color primario */
+}
+
+
+a.button:hover {
+    background-color: #656565;
+
+}
+
+footer p {
+    margin-top: 4rem;
+    color: #c5c5c5;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid #c5c5c5;
+}
+
+button.button {
+    border: none;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+input {
+    border: 1px solid #c5c5c5;
+    padding: 1rem;
+}
+
+
+form {
+
+}
+
+.input-first {
+    border-bottom: none;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.input-last {
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.failed {
+    color: #f62929;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    visibility: hidden;
+}

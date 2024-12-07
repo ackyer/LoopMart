@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Parkoid</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        #loader {
+            display: block;
+            z-index: 5000;
+            height: 100vh;
+            width: 100vw;
+            background-color: #e4f0f0;
+            color: #000;
+            position: absolute;
+            top:0;
+            left: 0;
+            text-align: center;
+            padding-top: calc(50vh - 150px);
+        }
+    </style>
+</head>
+<body>
+<div id="loader">
+    <img src="images/loader.gif" style="width: 200px;"><br>
+    <div style="display: inline-block">Data is loading ...</div>
+</div>
+
+<script>
+    async function getAccountData() {
+        const url = "http://localhost/api/account.php";
+        try {
+            const response = await fetch(url,  {});
+            if (!response.ok) {
+                throw new Error(`Response status: ${response.status}`);
+            }
+
+            const text_response = await response.text();
+
+            if (text_response != 'Signin') {
+                window.location.href = "http://localhost/account.html";
+            }
+
+            document.getElementById('loader').style.display = "none";
+
+        } catch (error) {
+            console.error(error.message);
+        }
+    }
+
+    getAccountData();
+</script>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a> </li>
+            <li><a href="pricing.html">Pricing</a> </li>
+            <li><a class="active" href="signin.html">Sign in</a> </li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <h1>Sign in</h1>
+    <div id="failed" class="failed">Sign in failed.</div>
+   <form>
+       <input class="input-first" type="email" id="username" name="username" placeholder="Email">
+       <br>
+       <input class="input-last" type="password" id="password" name="password" placeholder="Password">
+       <br>
+       <button id="signin" class="button">Sign in</button>
+       <script>
+
+           document.getElementById('signin').addEventListener('click',function (evt) {
+               evt.preventDefault();
+               console.log('sign in');
+
+               var username = document.getElementById('username').value;
+               var password = document.getElementById('password').value;
+
+               console.log(username, password);
+
+               async function getData() {
+                   const url = "http://localhost/api/signin.php";
+                   try {
+                       const response = await fetch(url,  {
+                           method: "POST",
+                           body: JSON.stringify({ username: username, password: password}),
+                       });
+                       if (!response.ok) {
+                           throw new Error(`Response status: ${response.status}`);
+                       }
+
+                       const text_response = await response.text();
+                       if(text_response == 'OK') {
+                           window.location.href = "http://localhost/account.html";
+                       } else {
+                           //show error message
+                           document.getElementById('failed').style.visibility = 'visible';
+                           document.getElementById('username').value = '';
+                           document.getElementById('password').value = '';
+                       }
+
+
+                   } catch (error) {
+                       console.error(error.message);
+                   }
+               }
+
+               getData();
+
+           })
+       </script>
+   </form>
+</main>
+
+
+</body>
+</html>

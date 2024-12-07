@@ -1,0 +1,113 @@
+[Fri Oct 25 09:25:51.717165 2024] [mpm_winnt:notice] [pid 7832:tid 396] AH00455: Apache/2.4.62 (Win64) configured -- resuming normal operations
+[Fri Oct 25 09:25:51.717165 2024] [mpm_winnt:notice] [pid 7832:tid 396] AH00456: Apache Lounge VS17 Server built: Sep  4 2024 10:31:52
+[Fri Oct 25 09:25:51.717165 2024] [core:notice] [pid 7832:tid 396] AH00094: Command line: 'httpd -d C:/Temp/parkoid/apache'
+[Fri Oct 25 09:25:51.717165 2024] [mpm_winnt:notice] [pid 7832:tid 396] AH00418: Parent: Created child process 3184
+Apache server interrupted...
+024] [mpm_winnt:notice] [pid 3184:tid 416] AH00354: Child: Starting 64 worker threads.
+[Fri Oct 25 10:00:16.922551 2024] [mpm_winnt:notice] [pid 7832:tid 396] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+Apache server interrupted...
+Apache server interrupted...
+Apache server interrupted...
+Apache server interrupted...
+[Fri Oct 25 10:00:18.953592 2024] [mpm_winnt:notice] [pid 3184:tid 416] AH00364: Child: All worker threads have exited.
+[Fri Oct 25 10:00:18.969218 2024] [mpm_winnt:notice] [pid 7832:tid 396] AH00430: Parent: Child process 3184 exited successfully.
+[Fri Oct 25 10:00:22.972666 2024] [mpm_winnt:notice] [pid 992:tid 448] AH00455: Apache/2.4.62 (Win64) PHP/8.3.13 configured -- resuming normal operations
+[Fri Oct 25 10:00:22.972666 2024] [mpm_winnt:notice] [pid 992:tid 448] AH00456: Apache Lounge VS17 Server built: Sep  4 2024 10:31:52
+[Fri Oct 25 10:00:22.972666 2024] [core:notice] [pid 992:tid 448] AH00094: Command line: 'httpd -d C:/Temp/parkoid/apache'
+[Fri Oct 25 10:00:22.988260 2024] [mpm_winnt:notice] [pid 992:tid 448] AH00418: Parent: Created child process 2884
+Apache server interrupted...
+024] [mpm_winnt:notice] [pid 2884:tid 400] AH00354: Child: Starting 64 worker threads.
+[Fri Oct 25 11:20:37.364662 2024] [mpm_winnt:notice] [pid 992:tid 448] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+Apache server interrupted...
+[Fri Oct 25 11:20:39.372048 2024] [mpm_winnt:notice] [pid 2884:tid 400] AH00364: Child: All worker threads have exited.
+[Fri Oct 25 11:20:39.411758 2024] [mpm_winnt:notice] [pid 992:tid 448] AH00430: Parent: Child process 2884 exited successfully.
+PHP Warning:  PHP Startup: Unable to load dynamic library 'c:/temp/parkoid/php/ext/php_mysqli.dll' (tried: c:/temp/parkoid/php/ext/php_mysqli.dll (Uveden\xc3\xbd modul nebyl nalezen), C:\\php\\ext\\php_c:/temp/parkoid/php/ext/php_mysqli.dll.dll (Uveden\xc3\xbd modul nebyl nalezen)) in Unknown on line 0
+[Fri Oct 25 11:20:43.676996 2024] [mpm_winnt:notice] [pid 10380:tid 396] AH00455: Apache/2.4.62 (Win64) PHP/8.3.13 configured -- resuming normal operations
+[Fri Oct 25 11:20:43.676996 2024] [mpm_winnt:notice] [pid 10380:tid 396] AH00456: Apache Lounge VS17 Server built: Sep  4 2024 10:31:52
+[Fri Oct 25 11:20:43.676996 2024] [core:notice] [pid 10380:tid 396] AH00094: Command line: 'httpd -d C:/Temp/parkoid/apache'
+[Fri Oct 25 11:20:43.682501 2024] [mpm_winnt:notice] [pid 10380:tid 396] AH00418: Parent: Created child process 4292
+Apache server interrupted...
+able to load dynamic library 'c:/temp/parkoid/php/ext/php_mysqli.dll' (tried: c:/temp/parkoid/php/ext/php_mysqli.dll (Uveden\xc3\xbd modul nebyl nalezen), C:\\php\\ext\\php_c:/temp/parkoid/php/ext/php_mysqli.dll.dll (Uveden\xc3\xbd modul nebyl nalezen)) in Unknown on line 0
+[Fri Oct 25 11:20:44.207376 2024] [mpm_winnt:notice] [pid 4292:tid 412] AH00354: Child: Starting 64 worker threads.
+[Fri Oct 25 11:21:07.684943 2024] [php:error] [pid 4292:tid 1264] [client ::1:60548] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in C:\\Temp\\parkoid\\app\\backend\\signin.php:16\nStack trace:\n#0 {main}\n  thrown in C:\\Temp\\parkoid\\app\\backend\\signin.php on line 16, referer: http://localhost/signin.html
+[Fri Oct 25 11:21:27.610931 2024] [mpm_winnt:notice] [pid 10380:tid 396] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+Apache server interrupted...
+Apache server interrupted...
+[Fri Oct 25 11:21:29.627323 2024] [mpm_winnt:notice] [pid 4292:tid 412] AH00364: Child: All worker threads have exited.
+[Fri Oct 25 11:21:29.648026 2024] [mpm_winnt:notice] [pid 10380:tid 396] AH00430: Parent: Child process 4292 exited successfully.
+PHP Warning:  PHP Startup: Unable to load dynamic library 'c:/temp/parkoid/php/ext/php_mysqli.dll' (tried: c:/temp/parkoid/php/ext/php_mysqli.dll (Uveden\xc3\xbd modul nebyl nalezen), C:\\php\\ext\\php_c:/temp/parkoid/php/ext/php_mysqli.dll.dll (Uveden\xc3\xbd modul nebyl nalezen)) in Unknown on line 0
+[Fri Oct 25 11:21:30.855466 2024] [mpm_winnt:notice] [pid 10608:tid 396] AH00455: Apache/2.4.62 (Win64) PHP/8.3.13 configured -- resuming normal operations
+[Fri Oct 25 11:21:30.855466 2024] [mpm_winnt:notice] [pid 10608:tid 396] AH00456: Apache Lounge VS17 Server built: Sep  4 2024 10:31:52
+[Fri Oct 25 11:21:30.855466 2024] [core:notice] [pid 10608:tid 396] AH00094: Command line: 'httpd -d C:/Temp/parkoid/apache'
+[Fri Oct 25 11:21:30.860118 2024] [mpm_winnt:notice] [pid 10608:tid 396] AH00418: Parent: Created child process 5348
+Apache server interrupted...
+able to load dynamic library 'c:/temp/parkoid/php/ext/php_mysqli.dll' (tried: c:/temp/parkoid/php/ext/php_mysqli.dll (Uveden\xc3\xbd modul nebyl nalezen), C:\\php\\ext\\php_c:/temp/parkoid/php/ext/php_mysqli.dll.dll (Uveden\xc3\xbd modul nebyl nalezen)) in Unknown on line 0
+[Fri Oct 25 11:21:31.385928 2024] [mpm_winnt:notice] [pid 5348:tid 420] AH00354: Child: Starting 64 worker threads.
+[Fri Oct 25 11:21:34.148172 2024] [php:error] [pid 5348:tid 1308] [client ::1:60562] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in C:\\Temp\\parkoid\\app\\backend\\signin.php:16\nStack trace:\n#0 {main}\n  thrown in C:\\Temp\\parkoid\\app\\backend\\signin.php on line 16, referer: http://localhost/signin.html
+[Fri Oct 25 11:22:00.339131 2024] [mpm_winnt:notice] [pid 10608:tid 396] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+Apache server interrupted...
+Apache server interrupted...
+[Fri Oct 25 11:22:02.354160 2024] [mpm_winnt:notice] [pid 5348:tid 420] AH00364: Child: All worker threads have exited.
+[Fri Oct 25 11:22:02.375115 2024] [mpm_winnt:notice] [pid 10608:tid 396] AH00430: Parent: Child process 5348 exited successfully.
+[Fri Oct 25 11:22:03.601488 2024] [mpm_winnt:notice] [pid 6844:tid 396] AH00455: Apache/2.4.62 (Win64) PHP/8.3.13 configured -- resuming normal operations
+[Fri Oct 25 11:22:03.601488 2024] [mpm_winnt:notice] [pid 6844:tid 396] AH00456: Apache Lounge VS17 Server built: Sep  4 2024 10:31:52
+[Fri Oct 25 11:22:03.601488 2024] [core:notice] [pid 6844:tid 396] AH00094: Command line: 'httpd -d C:/Temp/parkoid/apache'
+[Fri Oct 25 11:22:03.606475 2024] [mpm_winnt:notice] [pid 6844:tid 396] AH00418: Parent: Created child process 12332
+Apache server interrupted...
+024] [mpm_winnt:notice] [pid 12332:tid 456] AH00354: Child: Starting 64 worker threads.
+[Fri Oct 25 11:22:06.397894 2024] [php:error] [pid 12332:tid 1268] [client ::1:60874] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'parkoid'@'localhost' (using password: YES) in C:\\Temp\\parkoid\\app\\backend\\signin.php:16\nStack trace:\n#0 C:\\Temp\\parkoid\\app\\backend\\signin.php(16): mysqli->__construct('localhost', 'parkoid', Object(SensitiveParameterValue), 'parkoid')\n#1 {main}\n  thrown in C:\\Temp\\parkoid\\app\\backend\\signin.php on line 16, referer: http://localhost/signin.html
+[Fri Oct 25 12:01:55.569762 2024] [mpm_winnt:notice] [pid 6844:tid 396] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+Apache server interrupted...
+Apache server interrupted...
+[Fri Oct 25 12:01:57.600304 2024] [mpm_winnt:notice] [pid 12332:tid 456] AH00364: Child: All worker threads have exited.
+[Fri Oct 25 12:01:57.615920 2024] [mpm_winnt:notice] [pid 6844:tid 396] AH00430: Parent: Child process 12332 exited successfully.
+PHP Warning:  PHP Startup: Unable to load dynamic library 'c:/temp/parkoid/apache/php/ext/php_mysqli.dll' (tried: c:/temp/parkoid/apache/php/ext/php_mysqli.dll (No se puede encontrar el m\xc3\xb3dulo especificado), C:\\php\\ext\\php_c:/temp/parkoid/apache/php/ext/php_mysqli.dll.dll (No se puede encontrar el m\xc3\xb3dulo especificado)) in Unknown on line 0
+[Fri Nov 29 09:46:58.354699 2024] [mpm_winnt:notice] [pid 20960:tid 384] AH00455: Apache/2.4.62 (Win64) PHP/8.3.13 configured -- resuming normal operations
+[Fri Nov 29 09:46:58.354699 2024] [mpm_winnt:notice] [pid 20960:tid 384] AH00456: Apache Lounge VS17 Server built: Sep  4 2024 10:31:52
+[Fri Nov 29 09:46:58.354699 2024] [core:notice] [pid 20960:tid 384] AH00094: Command line: 'apache\\bin\\httpd -d C:/Users/akier/Documents/GitHub/LoopMart/LoopMartAPP/apache'
+[Fri Nov 29 09:46:58.357211 2024] [mpm_winnt:notice] [pid 20960:tid 384] AH00418: Parent: Created child process 33984
+Apache server shutdown initiated...
+ load dynamic library 'c:/temp/parkoid/apache/php/ext/php_mysqli.dll' (tried: c:/temp/parkoid/apache/php/ext/php_mysqli.dll (No se puede encontrar el m\xc3\xb3dulo especificado), C:\\php\\ext\\php_c:/temp/parkoid/apache/php/ext/php_mysqli.dll.dll (No se puede encontrar el m\xc3\xb3dulo especificado)) in Unknown on line 0
+[Fri Nov 29 09:46:58.903389 2024] [mpm_winnt:notice] [pid 33984:tid 380] AH00354: Child: Starting 64 worker threads.
+[Fri Nov 29 09:47:35.009872 2024] [mpm_winnt:notice] [pid 20960:tid 384] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Fri Nov 29 09:47:37.031298 2024] [mpm_winnt:notice] [pid 33984:tid 380] AH00364: Child: All worker threads have exited.
+[Fri Nov 29 09:47:37.074428 2024] [mpm_winnt:notice] [pid 20960:tid 384] AH00430: Parent: Child process 33984 exited successfully.
+PHP Warning:  PHP Startup: Unable to load dynamic library 'c:/temp/parkoid/apache/php/ext/php_mysqli.dll' (tried: c:/temp/parkoid/apache/php/ext/php_mysqli.dll (No se puede encontrar el m\xc3\xb3dulo especificado), C:\\php\\ext\\php_c:/temp/parkoid/apache/php/ext/php_mysqli.dll.dll (No se puede encontrar el m\xc3\xb3dulo especificado)) in Unknown on line 0
+[Fri Nov 29 09:47:38.306796 2024] [mpm_winnt:notice] [pid 33116:tid 384] AH00455: Apache/2.4.62 (Win64) PHP/8.3.13 configured -- resuming normal operations
+[Fri Nov 29 09:47:38.306796 2024] [mpm_winnt:notice] [pid 33116:tid 384] AH00456: Apache Lounge VS17 Server built: Sep  4 2024 10:31:52
+[Fri Nov 29 09:47:38.306796 2024] [core:notice] [pid 33116:tid 384] AH00094: Command line: 'apache\\bin\\httpd -d C:/Users/akier/Documents/GitHub/LoopMart/LoopMartAPP/apache'
+[Fri Nov 29 09:47:38.315227 2024] [mpm_winnt:notice] [pid 33116:tid 384] AH00418: Parent: Created child process 8652
+Apache server shutdown initiated...
+ load dynamic library 'c:/temp/parkoid/apache/php/ext/php_mysqli.dll' (tried: c:/temp/parkoid/apache/php/ext/php_mysqli.dll (No se puede encontrar el m\xc3\xb3dulo especificado), C:\\php\\ext\\php_c:/temp/parkoid/apache/php/ext/php_mysqli.dll.dll (No se puede encontrar el m\xc3\xb3dulo especificado)) in Unknown on line 0
+[Fri Nov 29 09:47:38.839095 2024] [mpm_winnt:notice] [pid 8652:tid 368] AH00354: Child: Starting 64 worker threads.
+[Fri Nov 29 11:51:00.723846 2024] [mpm_winnt:notice] [pid 33116:tid 384] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Fri Nov 29 11:51:02.743275 2024] [mpm_winnt:notice] [pid 8652:tid 368] AH00364: Child: All worker threads have exited.
+[Fri Nov 29 11:51:02.824520 2024] [mpm_winnt:notice] [pid 33116:tid 384] AH00430: Parent: Child process 8652 exited successfully.
+PHP Warning:  PHP Startup: Unable to load dynamic library 'c:/temp/parkoid/apache/php/ext/php_mysqli.dll' (tried: c:/temp/parkoid/apache/php/ext/php_mysqli.dll (No se puede encontrar el m\xc3\xb3dulo especificado), C:\\php\\ext\\php_c:/temp/parkoid/apache/php/ext/php_mysqli.dll.dll (No se puede encontrar el m\xc3\xb3dulo especificado)) in Unknown on line 0
+[Fri Nov 29 12:02:23.639944 2024] [mpm_winnt:notice] [pid 17304:tid 384] AH00455: Apache/2.4.62 (Win64) PHP/8.3.13 configured -- resuming normal operations
+[Fri Nov 29 12:02:23.639944 2024] [mpm_winnt:notice] [pid 17304:tid 384] AH00456: Apache Lounge VS17 Server built: Sep  4 2024 10:31:52
+[Fri Nov 29 12:02:23.639944 2024] [core:notice] [pid 17304:tid 384] AH00094: Command line: 'apache\\bin\\httpd -d C:/Users/akier/Documents/GitHub/LoopMart/LoopMartAPP/apache'
+[Fri Nov 29 12:02:23.646077 2024] [mpm_winnt:notice] [pid 17304:tid 384] AH00418: Parent: Created child process 37004
+Apache server interrupted...
+able to load dynamic library 'c:/temp/parkoid/apache/php/ext/php_mysqli.dll' (tried: c:/temp/parkoid/apache/php/ext/php_mysqli.dll (No se puede encontrar el m\xc3\xb3dulo especificado), C:\\php\\ext\\php_c:/temp/parkoid/apache/php/ext/php_mysqli.dll.dll (No se puede encontrar el m\xc3\xb3dulo especificado)) in Unknown on line 0
+[Fri Nov 29 12:02:24.148673 2024] [mpm_winnt:notice] [pid 37004:tid 372] AH00354: Child: Starting 64 worker threads.
+[Fri Nov 29 18:07:35.102635 2024] [mpm_winnt:notice] [pid 17304:tid 384] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+Apache server interrupted...
+[Fri Nov 29 18:07:37.105322 2024] [mpm_winnt:notice] [pid 37004:tid 372] AH00364: Child: All worker threads have exited.
+[Fri Nov 29 18:07:37.150350 2024] [mpm_winnt:notice] [pid 17304:tid 384] AH00430: Parent: Child process 37004 exited successfully.
+PHP Warning:  PHP Startup: Unable to load dynamic library 'c:/temp/parkoid/apache/php/ext/php_mysqli.dll' (tried: c:/temp/parkoid/apache/php/ext/php_mysqli.dll (No se puede encontrar el m\xc3\xb3dulo especificado), C:\\php\\ext\\php_c:/temp/parkoid/apache/php/ext/php_mysqli.dll.dll (No se puede encontrar el m\xc3\xb3dulo especificado)) in Unknown on line 0
+[Fri Nov 29 18:18:15.261253 2024] [mpm_winnt:notice] [pid 43656:tid 372] AH00455: Apache/2.4.62 (Win64) PHP/8.3.13 configured -- resuming normal operations
+[Fri Nov 29 18:18:15.261253 2024] [mpm_winnt:notice] [pid 43656:tid 372] AH00456: Apache Lounge VS17 Server built: Sep  4 2024 10:31:52
+[Fri Nov 29 18:18:15.261253 2024] [core:notice] [pid 43656:tid 372] AH00094: Command line: 'apache\\bin\\httpd -d C:/Users/akier/Documents/GitHub/LoopMart/LoopMartAPP/apache'
+[Fri Nov 29 18:18:15.267813 2024] [mpm_winnt:notice] [pid 43656:tid 372] AH00418: Parent: Created child process 41964
+PHP Warning:  PHP Startup: Unable to load dynamic library 'c:/temp/parkoid/apache/php/ext/php_mysqli.dll' (tried: c:/temp/parkoid/apache/php/ext/php_mysqli.dll (No se puede encontrar el m\xc3\xb3dulo especificado), C:\\php\\ext\\php_c:/temp/parkoid/apache/php/ext/php_mysqli.dll.dll (No se puede encontrar el m\xc3\xb3dulo especificado)) in Unknown on line 0
+[Fri Nov 29 18:18:15.597427 2024] [mpm_winnt:notice] [pid 41964:tid 388] AH00354: Child: Starting 64 worker threads.
+[Fri Nov 29 19:30:05.412428 2024] [php:error] [pid 41964:tid 1348] [client ::1:52050] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in C:\\Users\\akier\\Documents\\GitHub\\LoopMart\\LoopMartAPP\\app\\backend\\inc\\db_connection.php:8\nStack trace:\n#0 C:\\Users\\akier\\Documents\\GitHub\\LoopMart\\LoopMartAPP\\app\\backend\\signin.php(7): include()\n#1 {main}\n  thrown in C:\\Users\\akier\\Documents\\GitHub\\LoopMart\\LoopMartAPP\\app\\backend\\inc\\db_connection.php on line 8, referer: http://localhost/signin.html
+[Sat Dec 07 16:44:57.080455 2024] [core:warn] [pid 11572:tid 388] AH00098: pid file C:/Users/akier/Documents/GitHub/LoopMart/LoopMartAPP/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+PHP Warning:  PHP Startup: Unable to load dynamic library 'c:/temp/parkoid/apache/php/ext/php_mysqli.dll' (tried: c:/temp/parkoid/apache/php/ext/php_mysqli.dll (No se puede encontrar el m\xc3\xb3dulo especificado), C:\\php\\ext\\php_c:/temp/parkoid/apache/php/ext/php_mysqli.dll.dll (No se puede encontrar el m\xc3\xb3dulo especificado)) in Unknown on line 0
+[Sat Dec 07 16:44:57.162000 2024] [mpm_winnt:notice] [pid 11572:tid 388] AH00455: Apache/2.4.62 (Win64) PHP/8.3.13 configured -- resuming normal operations
+[Sat Dec 07 16:44:57.162000 2024] [mpm_winnt:notice] [pid 11572:tid 388] AH00456: Apache Lounge VS17 Server built: Sep  4 2024 10:31:52
+[Sat Dec 07 16:44:57.162000 2024] [core:notice] [pid 11572:tid 388] AH00094: Command line: 'apache\\bin\\httpd -d C:/Users/akier/Documents/GitHub/LoopMart/LoopMartAPP/apache'
+[Sat Dec 07 16:44:57.168075 2024] [mpm_winnt:notice] [pid 11572:tid 388] AH00418: Parent: Created child process 22864
+PHP Warning:  PHP Startup: Unable to load dynamic library 'c:/temp/parkoid/apache/php/ext/php_mysqli.dll' (tried: c:/temp/parkoid/apache/php/ext/php_mysqli.dll (No se puede encontrar el m\xc3\xb3dulo especificado), C:\\php\\ext\\php_c:/temp/parkoid/apache/php/ext/php_mysqli.dll.dll (No se puede encontrar el m\xc3\xb3dulo especificado)) in Unknown on line 0
+[Sat Dec 07 16:44:57.542747 2024] [mpm_winnt:notice] [pid 22864:tid 400] AH00354: Child: Starting 64 worker threads.

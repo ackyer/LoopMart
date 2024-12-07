@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Parkoid</title>
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a> </li>
+            <li><a href="pricing.html">Pricing</a> </li>
+            <li><a class="active" href="signin.html">Sign in</a> </li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <h1>Sign up</h1>
+    <div id="failed" class="failed">Sign up failed.</div>
+   <form>
+       <input class="input-first" type="email" id="username" name="username" placeholder="Email">
+       <br>
+       <input style="border-bottom: none" type="password" id="password" name="password" placeholder="Password">
+       <br>
+       <input class="input-last" type="text" id="nickname" name="nickname" placeholder="Nickname">
+       <br>
+       <button id="signup" class="button">Sign up</button>
+       <script>
+
+           document.getElementById('signup').addEventListener('click',function (evt) {
+               evt.preventDefault();
+               console.log('sign up');
+
+               var username = document.getElementById('username').value;
+               var password = document.getElementById('password').value;
+               var nickname = document.getElementById('nickname').value;
+
+               console.log(username, password, nickname);
+
+               async function getData() {
+                   const url = "http://localhost/api/signup.php";
+                   try {
+                       const response = await fetch(url,  {
+                           method: "POST",
+                           body: JSON.stringify({ username: username, password: password, nickname: nickname}),
+                       });
+                       if (!response.ok) {
+                           throw new Error(`Response status: ${response.status}`);
+                       }
+
+                       const text_response = await response.text();
+
+                       document.getElementById('username').value = '';
+                       document.getElementById('password').value = '';
+                       document.getElementById('nickname').value = '';
+
+                       if(text_response == 'OK') {
+                           //go to account
+                           window.location.href = "http://localhost/account.html";
+                       } else {
+                           //show error message
+                           document.getElementById('failed').innerText = text_response;
+                           document.getElementById('failed').style.visibility = 'visible';
+                       }
+
+
+                   } catch (error) {
+                       console.error(error.message);
+                   }
+               }
+
+               getData();
+
+           })
+       </script>
+   </form>
+</main>
+
+
+</body>
+</html>

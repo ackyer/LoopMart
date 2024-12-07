@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PArkoid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+<body>
+<div id="step_1">
+    <h1>Payment</h1>
+    <h2>Step 1</h2>
+    <form>
+        <input name="licence_plate" id="licence_plate" value="" placeholder="Insert the licence plate"><br>
+        <div id="failed" style="color:red; visibility: hidden">Licence plate doesn`t exist.</div>
+        <button id="licence_plate_btn">Next</button>
+        <script>
+            document.getElementById('licence_plate').addEventListener('input', function (evt) {
+
+                document.getElementById('failed').style.visibility = 'hidden';
+            })
+            document.getElementById('licence_plate_btn').addEventListener('click', function (evt) {
+                evt.preventDefault();
+                console.log('check licence plate');
+
+                var licence_plate = document.getElementById('licence_plate').value;
+
+                async function getData() {
+                    const url = "http://localhost/api/licence_plate.php";
+                    try {
+                        const response = await fetch(url, {
+                            method: "POST",
+                            body: JSON.stringify({licence_plate: licence_plate}),
+                        });
+                        if (!response.ok) {
+                            throw new Error(`Response status: ${response.status}`);
+                        }
+
+                        const text_response = await response.text();
+                        if (text_response == 'OK') {
+                            document.getElementById("step_2").style.display = "block";
+                            getBillData();
+                            document.getElementById("licence_plate").setAttribute('disabled', '');
+                            document.getElementById("licence_plate_btn").setAttribute('disabled', '');
+                        } else {
+                            //show error message
+                            document.getElementById('failed').style.visibility = 'visible';
+
+                        }
+
+
+                    } catch (error) {
+                        console.error(error.message);
+                    }
+                }
+
+                getData();
+
+            })
+
+        </script>
+    </form>
+</div>
+
+<div id="step_2" style="display: none">
+    <script>
+
+        async function getBillData() {
+            var licence_plate = document.getElementById('licence_plate').value;
+
+            const url = "http://localhost/api/bill.php";
+            try {
+                const response = await fetch(url, {
+                    method: "POST",
+                    body: JSON.stringify({licence_plate: licence_plate}),
+                });
+                if (!response.ok) {
+                    throw new Error(`Response status: ${response.status}`);
+                }
+
+                const json_response = await response.json();
+
+                console.log(json_response);
+                document.getElementById('parking_key').value = json_response.parking_key;
+                document.getElementById('licence_plate_res').innerText = json_response.license_plate;
+                document.getElementById('vehicle_in_res').innerText = json_response.vehicle_in;
+                document.getElementById('vehicle_out_res').innerText = json_response.vehicle_out;
+                document.getElementById('price').innerText = json_response.price;
+
+
+            } catch (error) {
+                console.error(error.message);
+            }
+        }
+
+    </script>
+    <h2>Step 2</h2>
+    <input id="parking_key" name="paking_key" type="hidden">
+    <div clas="row">
+        <span>Licence plate</span>
+        <span id="licence_plate_res">??????</span>
+    </div>
+    <div class="row">
+        <span>Vehicle in</span>
+        <span id="vehicle_in_res">??????</span>
+    </div>
+    <div class="row">
+        <span>Vehicle out</span>
+        <span id="vehicle_out_res">??????</span>
+    </div>
+    <div class="row">
+        <span>Price</span>
+        <span id="price">??????</span>
+    </div>
+    <h3>Select payment method</h3>
+    <form>
+        <input type="radio" name="payment_method" disabled> Parkoid wallet <br>
+        <input type="radio" name="payment_method" id="credit_card"> Credit card <br>
+    </form>
+    <script>
+        document.getElementById('credit_card').addEventListener('change', function () {
+            document.getElementById("credit_card_form").style.display = "block";
+        })
+    </script>
+    <div id="credit_card_form" style="display: none">
+        <form>
+            <input id="credit_card_number" name="credit_card_number" type="number" placeholder="Card number"><br>
+            <input id="credit_card_exp" name="credit_card_exp" type="number" placeholder="Exp."><br>
+            <input id="credit_card_cvv" name="credit_card_cvv" type="number" placeholder="CVV"><br>
+            <button id="pay_btn">Pay now</button>
+            <script>
+                document.getElementById('pay_btn').addEventListener('click', function(evt) {
+
+                    evt.preventDefault();
+
+                    async function payNow() {
+
+                        var parking_key = document.getElementById('parking_key').value;
+                        var credit_card_numbere = document.getElementById('credit_card_number').value;
+                        var credit_card_exp = document.getElementById('credit_card_exp').value;
+                        var credit_card_cvv = document.getElementById('credit_card_cvv').value;
+
+                        const url = "http://localhost/api/pay.php";
+                        try {
+                            const response = await fetch(url, {
+                                method: "POST",
+                                body: JSON.stringify({
+                                    parking_key: parking_key,
+                                    credit_card_numbere: credit_card_numbere,
+                                    credit_card_exp:credit_card_exp,
+                                    credit_card_cvv:credit_card_cvv
+                                }),
+                            });
+                            if (!response.ok) {
+                                throw new Error(`Response status: ${response.status}`);
+                            }
+
+                            const text_response = await response.text();
+                            if (text_response == 'OK') {
+                                // show Success
+                                document.getElementById('step_3').style.display= "block";
+                            } else {
+                                //show error message
+                            }
+
+
+                        } catch (error) {
+                            console.error(error.message);
+                        }
+                    }
+                    payNow();
+                })
+            </script>
+        </form>
+    </div>
+</div>
+
+<div id="step_3" style="display: none; color:green">
+    Thank you for your payment
+</div>
+</body>
+</html>

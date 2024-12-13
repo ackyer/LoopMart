@@ -3,22 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Title</title>
-    <style>
-        #loader {
-            display: block;
-            z-index: 5000;
-            height: 100vh;
-            width: 100vw;
-            background-color: #e4f0f0;
-            color: #000;
-            position: absolute;
-            top:0;
-            left: 0;
-            text-align: center;
-            padding-top: calc(50vh - 150px);
-        }
-    </style>
+    <title>LoopMart - account</title>
+    <link href="css/styles.css" rel="stylesheet" />
 </head>
 <body>
 <div id="loader">
@@ -26,41 +12,80 @@
     <div style="display: inline-block">Data is loading ...</div>
 </div>
 
+<header>
+    <nav>
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html"><img src="images/LoopMartLogoNoBackground.png" alt="LoopMart Logo"></a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a> </li>
+                <li><a href="market.html">Market</a> </li>
+                <li>
+                    <a href="basket.html" class="basket-link">
+                        <span class="basket-text">Basket</span>
+                        <img src="images/carrito.png" alt="Basket" class="nav-icon">
+                    </a>
+                </li>
+                <li><a href="aboutus.html">About us</a> </li>
+                <li>
+                    <a href="account.html">
+                        <img src="images/user-icon.png" alt="User Icon" class="icon">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
 
-<h1>Welcomme back <span id="username">.....</span></h1>
-<a href="signout.html">Sign out</a>
+<main class="profile-page">
+    <h1>Welcome to LoopMart <span id="name">.....</span></h1>
 
+    <script>
+        var email = "";
+        async function getAccountData() {
+            const url = "http://localhost/api/account.php";
+            try {
+                const response = await fetch(url,  {});
+                if (!response.ok) {
+                    throw new Error(`Response status: ${response.status}`);
+                }
 
-<script>
-    var username = "";
-    async function getAccountData() {
-        const url = "http://localhost/api/account.php";
-        try {
-            const response = await fetch(url,  {});
-            if (!response.ok) {
-                throw new Error(`Response status: ${response.status}`);
+                const text_response = await response.text();
+
+                if (text_response == 'Signin') {
+                    //go to signin.html
+                    window.location.href = "http://localhost/signin.html";
+                }
+                document.getElementById("loader").style.display = "none";
+                console.log(text_response);
+                document.getElementById('name').innerText = text_response;
+
+            } catch (error) {
+                console.error(error.message);
             }
-
-            const text_response = await response.text();
-
-            if (text_response == 'Signin') {
-                //go to signin.html
-                window.location.href = "http://localhost/signin.html";
-            }
-            document.getElementById("loader").style.display = "none";
-            console.log(text_response);
-            document.getElementById('username').innerText = text_response;
-
-        } catch (error) {
-            console.error(error.message);
         }
-    }
 
-    getAccountData();
+        getAccountData();
 
 
-    document.getElementById('username').innerText = username;
-</script>
+        document.getElementById('name').innerText = name;
+    </script>
 
+    <section class="profile-section">
+        <div class="profile-card">
+            <img src="images/user-icon.png" alt="Profile Picture" class="profile-picture">
+            <div class="profile-info">
+                <p><strong>Name:</strong> Name</p>
+                <p><strong>Email:</strong> Email</p>
+                <p><strong>Password:</strong> Contraseña</p>
+            </div>
+        </div>
+        <div class="profile-actions">
+            <button class="edit-button">Edit profile</button>
+            <a href="signout.html" class="signout-button">Sign out</a>
+        </div>
+    </section>
+</main>
 </body>
 </html>

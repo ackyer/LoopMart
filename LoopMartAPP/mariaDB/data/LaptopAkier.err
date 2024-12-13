@@ -82,3 +82,458 @@ Version: '11.5.2-MariaDB'  socket: ''  port: 3306  mariadb.org binary distributi
 
 2024-12-07 16:53:46 0 [ERROR] Do you already have another server running on port: 3306 ?
 2024-12-07 16:53:46 0 [ERROR] Aborting
+2024-12-07 17:02:40 0 [Note] Starting MariaDB 11.5.2-MariaDB source revision ea75a0b6009b0251e83193cd38c3974e36b65e06 server_uid V/lQBLHD+oMMYOdqRzDaVNiDT2Y= as process 20420
+2024-12-07 17:02:40 0 [Note] InnoDB: Compressed tables use zlib 1.3.1
+2024-12-07 17:02:40 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-07 17:02:40 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+2024-12-07 17:02:40 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-07 17:02:40 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-07 17:02:40 0 [Note] InnoDB: File system buffers for log disabled (block size=4096 bytes)
+2024-12-07 17:02:40 0 [Note] InnoDB: End of log at LSN=50091
+2024-12-07 17:02:40 0 [Note] InnoDB: Opened 3 undo tablespaces
+2024-12-07 17:02:40 0 [Note] InnoDB: 128 rollback segments in 3 undo tablespaces are active.
+2024-12-07 17:02:40 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+2024-12-07 17:02:40 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-07 17:02:40 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-07 17:02:40 0 [Note] InnoDB: log sequence number 50091; transaction id 20
+2024-12-07 17:02:40 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-07 17:02:40 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\akier\Documents\GitHub\LoopMart\LoopMartAPP\mariadb\data\ib_buffer_pool
+2024-12-07 17:02:40 0 [Note] mysqld: SSPI: using principal name 'localhost', mech 'Negotiate'
+2024-12-07 17:02:40 0 [Note] InnoDB: Buffer pool(s) load completed at 241207 17:02:40
+2024-12-07 17:02:40 0 [Note] Recovering after a crash using tc.log
+2024-12-07 17:02:40 0 [Note] Starting table crash recovery...
+2024-12-07 17:02:40 0 [Note] Crash table recovery finished.
+2024-12-07 17:02:41 0 [Note] Server socket created on IP: '::'.
+2024-12-07 17:02:41 0 [Note] Server socket created on IP: '0.0.0.0'.
+2024-12-07 17:02:41 0 [Note] mysqld: Event Scheduler: Loaded 0 events
+2024-12-07 17:02:41 0 [Note] mariadb\bin\mysqld: ready for connections.
+Version: '11.5.2-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2024-12-07 21:49:05 0 [Note] Starting MariaDB 11.5.2-MariaDB source revision ea75a0b6009b0251e83193cd38c3974e36b65e06 server_uid V/lQBLHD+oMMYOdqRzDaVNiDT2Y= as process 12544
+2024-12-07 21:49:06 0 [ERROR] InnoDB: The data file './ibdata1' must be writable
+2024-12-07 21:49:06 0 [ERROR] InnoDB: The data file './ibdata1' must be writable
+2024-12-07 21:49:06 0 [ERROR] Plugin 'InnoDB' registration as a STORAGE ENGINE failed.
+2024-12-07 21:49:06 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-07 21:49:06 0 [Note] mysqld: SSPI: using principal name 'localhost', mech 'Negotiate'
+2024-12-07 21:49:06 0 [ERROR] Unknown/unsupported storage engine: InnoDB
+2024-12-07 21:49:06 0 [ERROR] Aborting
+2024-12-07 21:49:10 0 [Note] console_event_handler: received CTRL_C_EVENT event, shutting down
+2024-12-07 21:49:10 0 [Note] mariadb\bin\mysqld (initiated by: unknown): Normal shutdown
+2024-12-07 21:49:10 0 [Note] InnoDB: FTS optimize thread exiting.
+2024-12-07 21:49:10 0 [Note] InnoDB: Starting shutdown...
+2024-12-07 21:49:10 0 [Note] InnoDB: Dumping buffer pool(s) to C:\Users\akier\Documents\GitHub\LoopMart\LoopMartAPP\mariadb\data\ib_buffer_pool
+2024-12-07 21:49:10 0 [Note] InnoDB: Buffer pool(s) dump completed at 241207 21:49:10
+2024-12-07 21:49:10 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+2024-12-07 21:49:10 0 [Note] InnoDB: Shutdown completed; log sequence number 50091; transaction id 21
+2024-12-07 21:49:10 0 [Note] mariadb\bin\mysqld: Shutdown complete
+
+2024-12-08 18:37:58 0 [Note] Starting MariaDB 11.5.2-MariaDB source revision ea75a0b6009b0251e83193cd38c3974e36b65e06 server_uid V/lQBLHD+oMMYOdqRzDaVNiDT2Y= as process 26284
+2024-12-08 18:37:58 0 [Note] InnoDB: Compressed tables use zlib 1.3.1
+2024-12-08 18:37:58 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-08 18:37:58 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+2024-12-08 18:37:58 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-08 18:37:58 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-08 18:37:58 0 [Note] InnoDB: File system buffers for log disabled (block size=4096 bytes)
+2024-12-08 18:37:58 0 [Note] InnoDB: End of log at LSN=50091
+2024-12-08 18:37:58 0 [Note] InnoDB: Opened 3 undo tablespaces
+2024-12-08 18:37:58 0 [Note] InnoDB: 128 rollback segments in 3 undo tablespaces are active.
+2024-12-08 18:37:58 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-08 18:37:58 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-08 18:37:58 0 [Note] InnoDB: log sequence number 50091; transaction id 20
+2024-12-08 18:37:58 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\akier\Documents\GitHub\LoopMart\LoopMartAPP\mariadb\data\ib_buffer_pool
+2024-12-08 18:37:58 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-08 18:37:58 0 [Note] mysqld: SSPI: using principal name 'localhost', mech 'Negotiate'
+2024-12-08 18:37:58 0 [Note] InnoDB: Buffer pool(s) load completed at 241208 18:37:58
+2024-12-08 18:37:59 0 [Note] Server socket created on IP: '::'.
+2024-12-08 18:37:59 0 [Note] Server socket created on IP: '0.0.0.0'.
+2024-12-08 18:37:59 0 [Note] mysqld: Event Scheduler: Loaded 0 events
+2024-12-08 18:37:59 0 [Note] mariadb\bin\mysqld: ready for connections.
+Version: '11.5.2-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2024-12-09 15:31:03 0 [Note] console_event_handler: received CTRL_C_EVENT event, shutting down
+2024-12-09 15:31:03 0 [Note] mariadb\bin\mysqld (initiated by: unknown): Normal shutdown
+2024-12-09 15:31:03 0 [Note] InnoDB: FTS optimize thread exiting.
+2024-12-09 15:31:03 0 [Note] InnoDB: Starting shutdown...
+2024-12-09 15:31:03 0 [Note] InnoDB: Dumping buffer pool(s) to C:\Users\akier\Documents\GitHub\LoopMart\LoopMartAPP\mariadb\data\ib_buffer_pool
+2024-12-09 15:31:03 0 [Note] InnoDB: Buffer pool(s) dump completed at 241209 15:31:03
+2024-12-09 15:31:03 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+2024-12-09 15:31:03 0 [Note] InnoDB: Shutdown completed; log sequence number 50091; transaction id 21
+2024-12-09 15:31:03 0 [Note] mariadb\bin\mysqld: Shutdown complete
+
+2024-12-09 15:33:28 0 [Note] Starting MariaDB 11.5.2-MariaDB source revision ea75a0b6009b0251e83193cd38c3974e36b65e06 server_uid V/lQBLHD+oMMYOdqRzDaVNiDT2Y= as process 42104
+2024-12-09 15:33:28 0 [Note] InnoDB: Compressed tables use zlib 1.3.1
+2024-12-09 15:33:28 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-09 15:33:28 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+2024-12-09 15:33:28 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-09 15:33:28 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-09 15:33:28 0 [Note] InnoDB: File system buffers for log disabled (block size=4096 bytes)
+2024-12-09 15:33:28 0 [Note] InnoDB: End of log at LSN=50091
+2024-12-09 15:33:28 0 [Note] InnoDB: Opened 3 undo tablespaces
+2024-12-09 15:33:28 0 [Note] InnoDB: 128 rollback segments in 3 undo tablespaces are active.
+2024-12-09 15:33:28 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-09 15:33:28 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-09 15:33:28 0 [Note] InnoDB: log sequence number 50091; transaction id 20
+2024-12-09 15:33:28 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-09 15:33:28 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\akier\Documents\GitHub\LoopMart\LoopMartAPP\mariadb\data\ib_buffer_pool
+2024-12-09 15:33:28 0 [Note] mysqld: SSPI: using principal name 'localhost', mech 'Negotiate'
+2024-12-09 15:33:28 0 [Note] InnoDB: Buffer pool(s) load completed at 241209 15:33:28
+2024-12-09 15:33:31 0 [Note] Server socket created on IP: '::'.
+2024-12-09 15:33:31 0 [Note] Server socket created on IP: '0.0.0.0'.
+2024-12-09 15:33:31 0 [Note] mysqld: Event Scheduler: Loaded 0 events
+2024-12-09 15:33:31 0 [Note] mariadb\bin\mysqld: ready for connections.
+Version: '11.5.2-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2024-12-09 19:08:03 0 [Note] Starting MariaDB 11.5.2-MariaDB source revision ea75a0b6009b0251e83193cd38c3974e36b65e06 server_uid V/lQBLHD+oMMYOdqRzDaVNiDT2Y= as process 39308
+2024-12-09 19:08:03 0 [Note] InnoDB: Compressed tables use zlib 1.3.1
+2024-12-09 19:08:03 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-09 19:08:03 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+2024-12-09 19:08:03 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-09 19:08:03 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-09 19:08:03 0 [Note] InnoDB: File system buffers for log disabled (block size=4096 bytes)
+2024-12-09 19:08:03 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=50075
+2024-12-09 19:08:03 0 [Note] InnoDB: End of log at LSN=78792
+2024-12-09 19:08:03 0 [Note] InnoDB: To recover: 55 pages
+2024-12-09 19:08:03 0 [Note] InnoDB: Opened 3 undo tablespaces
+2024-12-09 19:08:03 0 [Note] InnoDB: 128 rollback segments in 3 undo tablespaces are active.
+2024-12-09 19:08:03 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+2024-12-09 19:08:03 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-09 19:08:03 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-09 19:08:03 0 [Note] InnoDB: log sequence number 78792; transaction id 59
+2024-12-09 19:08:03 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-09 19:08:03 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\akier\Documents\GitHub\LoopMart\LoopMartAPP\mariadb\data\ib_buffer_pool
+2024-12-09 19:08:03 0 [Note] mysqld: SSPI: using principal name 'localhost', mech 'Negotiate'
+2024-12-09 19:08:03 0 [Note] InnoDB: Buffer pool(s) load completed at 241209 19:08:03
+2024-12-09 19:08:03 0 [Note] Recovering after a crash using tc.log
+2024-12-09 19:08:03 0 [Note] Starting table crash recovery...
+2024-12-09 19:08:03 0 [Note] Crash table recovery finished.
+2024-12-09 19:08:06 0 [Note] Server socket created on IP: '::'.
+2024-12-09 19:08:06 0 [Note] Server socket created on IP: '0.0.0.0'.
+2024-12-09 19:08:06 0 [Note] mysqld: Event Scheduler: Loaded 0 events
+2024-12-09 19:08:06 0 [Note] mariadb\bin\mysqld: ready for connections.
+Version: '11.5.2-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2024-12-09 19:27:14 0 [Note] Starting MariaDB 11.5.2-MariaDB source revision ea75a0b6009b0251e83193cd38c3974e36b65e06 server_uid V/lQBLHD+oMMYOdqRzDaVNiDT2Y= as process 27476
+2024-12-09 19:27:14 0 [Note] InnoDB: Compressed tables use zlib 1.3.1
+2024-12-09 19:27:14 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-09 19:27:14 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+2024-12-09 19:27:14 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-09 19:27:14 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-09 19:27:14 0 [Note] InnoDB: File system buffers for log disabled (block size=4096 bytes)
+2024-12-09 19:27:14 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=50091
+2024-12-09 19:27:14 0 [Note] InnoDB: End of log at LSN=79031
+2024-12-09 19:27:14 0 [Note] InnoDB: To recover: 55 pages
+2024-12-09 19:27:14 0 [Note] InnoDB: Opened 3 undo tablespaces
+2024-12-09 19:27:14 0 [Note] InnoDB: 128 rollback segments in 3 undo tablespaces are active.
+2024-12-09 19:27:14 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+2024-12-09 19:27:14 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-09 19:27:14 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-09 19:27:14 0 [Note] InnoDB: log sequence number 79031; transaction id 59
+2024-12-09 19:27:14 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\akier\Documents\GitHub\LoopMart\LoopMartAPP\mariadb\data\ib_buffer_pool
+2024-12-09 19:27:14 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-09 19:27:14 0 [Note] mysqld: SSPI: using principal name 'localhost', mech 'Negotiate'
+2024-12-09 19:27:14 0 [Note] InnoDB: Buffer pool(s) load completed at 241209 19:27:14
+2024-12-09 19:27:14 0 [Note] Recovering after a crash using tc.log
+2024-12-09 19:27:14 0 [Note] Starting table crash recovery...
+2024-12-09 19:27:14 0 [Note] Crash table recovery finished.
+2024-12-09 19:27:14 0 [Note] Server socket created on IP: '::'.
+2024-12-09 19:27:14 0 [Note] Server socket created on IP: '0.0.0.0'.
+2024-12-09 19:27:15 0 [Note] mysqld: Event Scheduler: Loaded 0 events
+2024-12-09 19:27:15 0 [Note] mariadb\bin\mysqld: ready for connections.
+Version: '11.5.2-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2024-12-09 19:38:40 0 [Note] Starting MariaDB 11.5.2-MariaDB source revision ea75a0b6009b0251e83193cd38c3974e36b65e06 server_uid V/lQBLHD+oMMYOdqRzDaVNiDT2Y= as process 26888
+2024-12-09 19:38:40 0 [Note] InnoDB: Compressed tables use zlib 1.3.1
+2024-12-09 19:38:40 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-09 19:38:40 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+2024-12-09 19:38:40 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-09 19:38:40 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-09 19:38:40 0 [Note] InnoDB: File system buffers for log disabled (block size=4096 bytes)
+2024-12-09 19:38:40 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=50091
+2024-12-09 19:38:40 0 [Note] InnoDB: End of log at LSN=79115
+2024-12-09 19:38:40 0 [Note] InnoDB: To recover: 55 pages
+2024-12-09 19:38:40 0 [Note] InnoDB: Opened 3 undo tablespaces
+2024-12-09 19:38:40 0 [Note] InnoDB: 128 rollback segments in 3 undo tablespaces are active.
+2024-12-09 19:38:40 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+2024-12-09 19:38:40 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-09 19:38:40 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-09 19:38:40 0 [Note] InnoDB: log sequence number 79115; transaction id 59
+2024-12-09 19:38:40 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-09 19:38:40 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\akier\Documents\GitHub\LoopMart\LoopMartAPP\mariadb\data\ib_buffer_pool
+2024-12-09 19:38:40 0 [Note] mysqld: SSPI: using principal name 'localhost', mech 'Negotiate'
+2024-12-09 19:38:40 0 [Note] InnoDB: Buffer pool(s) load completed at 241209 19:38:40
+2024-12-09 19:38:40 0 [Note] Recovering after a crash using tc.log
+2024-12-09 19:38:40 0 [Note] Starting table crash recovery...
+2024-12-09 19:38:40 0 [Note] Crash table recovery finished.
+2024-12-09 19:38:41 0 [Note] Server socket created on IP: '::'.
+2024-12-09 19:38:41 0 [Note] Server socket created on IP: '0.0.0.0'.
+2024-12-09 19:38:41 0 [Note] mysqld: Event Scheduler: Loaded 0 events
+2024-12-09 19:38:41 0 [Note] mariadb\bin\mysqld: ready for connections.
+Version: '11.5.2-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2024-12-09 19:54:52 0 [Note] Starting MariaDB 11.5.2-MariaDB source revision ea75a0b6009b0251e83193cd38c3974e36b65e06 server_uid V/lQBLHD+oMMYOdqRzDaVNiDT2Y= as process 42468
+2024-12-09 19:54:52 0 [Note] InnoDB: Compressed tables use zlib 1.3.1
+2024-12-09 19:54:52 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-09 19:54:52 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+2024-12-09 19:54:52 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-09 19:54:52 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-09 19:54:52 0 [Note] InnoDB: File system buffers for log disabled (block size=4096 bytes)
+2024-12-09 19:54:52 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=50091
+2024-12-09 19:54:52 0 [Note] InnoDB: End of log at LSN=79199
+2024-12-09 19:54:52 0 [Note] InnoDB: To recover: 55 pages
+2024-12-09 19:54:52 0 [Note] InnoDB: Opened 3 undo tablespaces
+2024-12-09 19:54:52 0 [Note] InnoDB: 128 rollback segments in 3 undo tablespaces are active.
+2024-12-09 19:54:52 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+2024-12-09 19:54:52 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-09 19:54:52 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-09 19:54:52 0 [Note] InnoDB: log sequence number 79199; transaction id 59
+2024-12-09 19:54:52 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-09 19:54:52 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\akier\Documents\GitHub\LoopMart\LoopMartAPP\mariadb\data\ib_buffer_pool
+2024-12-09 19:54:52 0 [Note] mysqld: SSPI: using principal name 'localhost', mech 'Negotiate'
+2024-12-09 19:54:52 0 [Note] InnoDB: Buffer pool(s) load completed at 241209 19:54:52
+2024-12-09 19:54:52 0 [Note] Recovering after a crash using tc.log
+2024-12-09 19:54:52 0 [Note] Starting table crash recovery...
+2024-12-09 19:54:52 0 [Note] Crash table recovery finished.
+2024-12-09 19:54:52 0 [Note] Server socket created on IP: '::'.
+2024-12-09 19:54:52 0 [Note] Server socket created on IP: '0.0.0.0'.
+2024-12-09 19:54:52 0 [Note] mysqld: Event Scheduler: Loaded 0 events
+2024-12-09 19:54:52 0 [Note] mariadb\bin\mysqld: ready for connections.
+Version: '11.5.2-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2024-12-09 19:59:54 0 [Note] Starting MariaDB 11.5.2-MariaDB source revision ea75a0b6009b0251e83193cd38c3974e36b65e06 server_uid V/lQBLHD+oMMYOdqRzDaVNiDT2Y= as process 15184
+2024-12-09 19:59:54 0 [Note] InnoDB: Compressed tables use zlib 1.3.1
+2024-12-09 19:59:54 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-09 19:59:54 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+2024-12-09 19:59:54 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-09 19:59:54 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-09 19:59:54 0 [Note] InnoDB: File system buffers for log disabled (block size=4096 bytes)
+2024-12-09 19:59:54 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=50091
+2024-12-09 19:59:54 0 [Note] InnoDB: End of log at LSN=79283
+2024-12-09 19:59:54 0 [Note] InnoDB: To recover: 55 pages
+2024-12-09 19:59:54 0 [Note] InnoDB: Opened 3 undo tablespaces
+2024-12-09 19:59:54 0 [Note] InnoDB: 128 rollback segments in 3 undo tablespaces are active.
+2024-12-09 19:59:54 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+2024-12-09 19:59:54 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-09 19:59:54 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-09 19:59:54 0 [Note] InnoDB: log sequence number 79283; transaction id 59
+2024-12-09 19:59:54 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-09 19:59:54 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\akier\Documents\GitHub\LoopMart\LoopMartAPP\mariadb\data\ib_buffer_pool
+2024-12-09 19:59:54 0 [Note] mysqld: SSPI: using principal name 'localhost', mech 'Negotiate'
+2024-12-09 19:59:54 0 [Note] InnoDB: Buffer pool(s) load completed at 241209 19:59:54
+2024-12-09 19:59:54 0 [Note] Recovering after a crash using tc.log
+2024-12-09 19:59:54 0 [Note] Starting table crash recovery...
+2024-12-09 19:59:54 0 [Note] Crash table recovery finished.
+2024-12-09 19:59:54 0 [Note] Server socket created on IP: '::'.
+2024-12-09 19:59:54 0 [Note] Server socket created on IP: '0.0.0.0'.
+2024-12-09 19:59:54 0 [Note] mysqld: Event Scheduler: Loaded 0 events
+2024-12-09 19:59:54 0 [Note] mariadb\bin\mysqld: ready for connections.
+Version: '11.5.2-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2024-12-10 16:48:54 0 [Note] Starting MariaDB 11.5.2-MariaDB source revision ea75a0b6009b0251e83193cd38c3974e36b65e06 server_uid V/lQBLHD+oMMYOdqRzDaVNiDT2Y= as process 39856
+2024-12-10 16:48:54 0 [Note] InnoDB: Compressed tables use zlib 1.3.1
+2024-12-10 16:48:54 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-10 16:48:54 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+2024-12-10 16:48:54 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-10 16:48:54 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-10 16:48:54 0 [Note] InnoDB: File system buffers for log disabled (block size=4096 bytes)
+2024-12-10 16:48:54 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=50091
+2024-12-10 16:48:54 0 [Note] InnoDB: End of log at LSN=79367
+2024-12-10 16:48:54 0 [Note] InnoDB: To recover: 55 pages
+2024-12-10 16:48:54 0 [Note] InnoDB: Opened 3 undo tablespaces
+2024-12-10 16:48:54 0 [Note] InnoDB: 128 rollback segments in 3 undo tablespaces are active.
+2024-12-10 16:48:54 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+2024-12-10 16:48:54 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-10 16:48:54 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-10 16:48:54 0 [Note] InnoDB: log sequence number 79367; transaction id 59
+2024-12-10 16:48:54 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-10 16:48:54 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\akier\Documents\GitHub\LoopMart\LoopMartAPP\mariadb\data\ib_buffer_pool
+2024-12-10 16:48:54 0 [Note] mysqld: SSPI: using principal name 'localhost', mech 'Negotiate'
+2024-12-10 16:48:54 0 [Note] InnoDB: Buffer pool(s) load completed at 241210 16:48:54
+2024-12-10 16:48:54 0 [Note] Recovering after a crash using tc.log
+2024-12-10 16:48:54 0 [Note] Starting table crash recovery...
+2024-12-10 16:48:54 0 [Note] Crash table recovery finished.
+2024-12-10 16:48:54 0 [Note] Server socket created on IP: '::'.
+2024-12-10 16:48:54 0 [Note] Server socket created on IP: '0.0.0.0'.
+2024-12-10 16:48:55 0 [Note] mysqld: Event Scheduler: Loaded 0 events
+2024-12-10 16:48:55 0 [Note] mariadb\bin\mysqld: ready for connections.
+Version: '11.5.2-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2024-12-10 21:35:31 4 [Warning] Aborted connection 4 to db: 'loopmart' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2024-12-11  9:45:52 0 [Note] Starting MariaDB 11.5.2-MariaDB source revision ea75a0b6009b0251e83193cd38c3974e36b65e06 server_uid V/lQBLHD+oMMYOdqRzDaVNiDT2Y= as process 25280
+2024-12-11  9:45:52 0 [Note] InnoDB: Compressed tables use zlib 1.3.1
+2024-12-11  9:45:52 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-11  9:45:52 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+2024-12-11  9:45:52 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-11  9:45:52 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-11  9:45:52 0 [Note] InnoDB: File system buffers for log disabled (block size=4096 bytes)
+2024-12-11  9:45:52 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=50091
+2024-12-11  9:45:52 0 [Note] InnoDB: End of log at LSN=84698
+2024-12-11  9:45:52 0 [Note] InnoDB: To recover: 55 pages
+2024-12-11  9:45:52 0 [Note] InnoDB: Opened 3 undo tablespaces
+2024-12-11  9:45:52 0 [Note] InnoDB: 128 rollback segments in 3 undo tablespaces are active.
+2024-12-11  9:45:52 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+2024-12-11  9:45:52 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-11  9:45:52 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-11  9:45:52 0 [Note] InnoDB: log sequence number 84698; transaction id 74
+2024-12-11  9:45:52 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-11  9:45:52 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\akier\Documents\GitHub\LoopMart\LoopMartAPP\mariadb\data\ib_buffer_pool
+2024-12-11  9:45:52 0 [Note] mysqld: SSPI: using principal name 'localhost', mech 'Negotiate'
+2024-12-11  9:45:52 0 [Note] Recovering after a crash using tc.log
+2024-12-11  9:45:52 0 [Note] Starting table crash recovery...
+2024-12-11  9:45:52 0 [Note] Crash table recovery finished.
+2024-12-11  9:45:52 0 [Note] InnoDB: Buffer pool(s) load completed at 241211  9:45:52
+2024-12-11  9:45:53 0 [Note] Server socket created on IP: '::'.
+2024-12-11  9:45:53 0 [ERROR] Can't start server: Bind on TCP/IP port. Got error: 10013: Intento de acceso a un socket no permitido por sus permisos de acceso.
+
+2024-12-11  9:45:53 0 [ERROR] Do you already have another server running on port: 3306 ?
+2024-12-11  9:45:53 0 [ERROR] Aborting
+2024-12-11 13:56:04 0 [Note] Starting MariaDB 11.5.2-MariaDB source revision ea75a0b6009b0251e83193cd38c3974e36b65e06 server_uid V/lQBLHD+oMMYOdqRzDaVNiDT2Y= as process 20044
+2024-12-11 13:56:04 0 [Note] InnoDB: Compressed tables use zlib 1.3.1
+2024-12-11 13:56:04 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-11 13:56:04 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+2024-12-11 13:56:04 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-11 13:56:04 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-11 13:56:04 0 [Note] InnoDB: File system buffers for log disabled (block size=4096 bytes)
+2024-12-11 13:56:04 0 [Note] InnoDB: End of log at LSN=85040
+2024-12-11 13:56:04 0 [Note] InnoDB: Opened 3 undo tablespaces
+2024-12-11 13:56:04 0 [Note] InnoDB: 128 rollback segments in 3 undo tablespaces are active.
+2024-12-11 13:56:04 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-11 13:56:04 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-11 13:56:04 0 [Note] InnoDB: log sequence number 85040; transaction id 74
+2024-12-11 13:56:04 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-11 13:56:04 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\akier\Documents\GitHub\LoopMart\LoopMartAPP\mariadb\data\ib_buffer_pool
+2024-12-11 13:56:04 0 [Note] mysqld: SSPI: using principal name 'localhost', mech 'Negotiate'
+2024-12-11 13:56:04 0 [Note] InnoDB: Buffer pool(s) load completed at 241211 13:56:04
+2024-12-11 13:56:07 0 [Note] Server socket created on IP: '::'.
+2024-12-11 13:56:07 0 [ERROR] Can't start server: Bind on TCP/IP port. Got error: 10013: Intento de acceso a un socket no permitido por sus permisos de acceso.
+
+2024-12-11 13:56:07 0 [ERROR] Do you already have another server running on port: 3306 ?
+2024-12-11 13:56:07 0 [ERROR] Aborting
+2024-12-11 13:56:39 0 [Note] Starting MariaDB 11.5.2-MariaDB source revision ea75a0b6009b0251e83193cd38c3974e36b65e06 server_uid V/lQBLHD+oMMYOdqRzDaVNiDT2Y= as process 25076
+2024-12-11 13:56:39 0 [Note] InnoDB: Compressed tables use zlib 1.3.1
+2024-12-11 13:56:39 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-11 13:56:39 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+2024-12-11 13:56:39 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-11 13:56:39 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-11 13:56:39 0 [Note] InnoDB: File system buffers for log disabled (block size=4096 bytes)
+2024-12-11 13:56:39 0 [Note] InnoDB: End of log at LSN=85040
+2024-12-11 13:56:39 0 [Note] InnoDB: Opened 3 undo tablespaces
+2024-12-11 13:56:39 0 [Note] InnoDB: 128 rollback segments in 3 undo tablespaces are active.
+2024-12-11 13:56:39 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-11 13:56:39 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-11 13:56:39 0 [Note] InnoDB: log sequence number 85040; transaction id 74
+2024-12-11 13:56:39 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-11 13:56:39 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\akier\Documents\GitHub\LoopMart\LoopMartAPP\mariadb\data\ib_buffer_pool
+2024-12-11 13:56:39 0 [Note] mysqld: SSPI: using principal name 'localhost', mech 'Negotiate'
+2024-12-11 13:56:39 0 [Note] InnoDB: Buffer pool(s) load completed at 241211 13:56:39
+2024-12-11 13:56:40 0 [Note] Server socket created on IP: '::'.
+2024-12-11 13:56:40 0 [ERROR] Can't start server: Bind on TCP/IP port. Got error: 10013: Intento de acceso a un socket no permitido por sus permisos de acceso.
+
+2024-12-11 13:56:40 0 [ERROR] Do you already have another server running on port: 3306 ?
+2024-12-11 13:56:40 0 [ERROR] Aborting
+2024-12-11 19:12:13 0 [Note] Starting MariaDB 11.5.2-MariaDB source revision ea75a0b6009b0251e83193cd38c3974e36b65e06 server_uid V/lQBLHD+oMMYOdqRzDaVNiDT2Y= as process 23836
+2024-12-11 19:12:13 0 [Note] InnoDB: Compressed tables use zlib 1.3.1
+2024-12-11 19:12:13 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-11 19:12:13 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+2024-12-11 19:12:13 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-11 19:12:13 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-11 19:12:13 0 [Note] InnoDB: File system buffers for log disabled (block size=4096 bytes)
+2024-12-11 19:12:13 0 [Note] InnoDB: End of log at LSN=85040
+2024-12-11 19:12:13 0 [Note] InnoDB: Opened 3 undo tablespaces
+2024-12-11 19:12:13 0 [Note] InnoDB: 128 rollback segments in 3 undo tablespaces are active.
+2024-12-11 19:12:13 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+2024-12-11 19:12:13 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-11 19:12:13 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-11 19:12:13 0 [Note] InnoDB: log sequence number 85040; transaction id 74
+2024-12-11 19:12:13 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-11 19:12:13 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\akier\Documents\GitHub\LoopMart\LoopMartAPP\mariadb\data\ib_buffer_pool
+2024-12-11 19:12:13 0 [Note] mysqld: SSPI: using principal name 'localhost', mech 'Negotiate'
+2024-12-11 19:12:13 0 [Note] Recovering after a crash using tc.log
+2024-12-11 19:12:13 0 [Note] Starting table crash recovery...
+2024-12-11 19:12:13 0 [Note] Crash table recovery finished.
+2024-12-11 19:12:13 0 [Note] InnoDB: Buffer pool(s) load completed at 241211 19:12:13
+2024-12-11 19:12:14 0 [Note] Server socket created on IP: '::'.
+2024-12-11 19:12:14 0 [Note] Server socket created on IP: '0.0.0.0'.
+2024-12-11 19:12:14 0 [Note] mysqld: Event Scheduler: Loaded 0 events
+2024-12-11 19:12:14 0 [Note] mariadb\bin\mysqld: ready for connections.
+Version: '11.5.2-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2024-12-11 22:03:33 3 [Warning] Aborted connection 3 to db: 'loopmart' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2024-12-12  4:47:10 15 [Warning] Aborted connection 15 to db: 'loopmart' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2024-12-12 10:09:10 0 [Note] Starting MariaDB 11.5.2-MariaDB source revision ea75a0b6009b0251e83193cd38c3974e36b65e06 server_uid V/lQBLHD+oMMYOdqRzDaVNiDT2Y= as process 34284
+2024-12-12 10:09:10 0 [Note] InnoDB: Compressed tables use zlib 1.3.1
+2024-12-12 10:09:10 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-12 10:09:10 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+2024-12-12 10:09:10 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-12 10:09:10 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-12 10:09:10 0 [Note] InnoDB: File system buffers for log disabled (block size=4096 bytes)
+2024-12-12 10:09:10 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=85024
+2024-12-12 10:09:11 0 [Note] InnoDB: End of log at LSN=88500
+2024-12-12 10:09:11 0 [Note] InnoDB: To recover: 17 pages
+2024-12-12 10:09:11 0 [Note] InnoDB: Opened 3 undo tablespaces
+2024-12-12 10:09:11 0 [Note] InnoDB: 128 rollback segments in 3 undo tablespaces are active.
+2024-12-12 10:09:11 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+2024-12-12 10:09:11 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-12 10:09:11 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-12 10:09:11 0 [Note] InnoDB: log sequence number 88500; transaction id 85
+2024-12-12 10:09:11 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-12 10:09:11 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\akier\Documents\GitHub\LoopMart\LoopMartAPP\mariadb\data\ib_buffer_pool
+2024-12-12 10:09:11 0 [Note] mysqld: SSPI: using principal name 'localhost', mech 'Negotiate'
+2024-12-12 10:09:11 0 [Note] Recovering after a crash using tc.log
+2024-12-12 10:09:11 0 [Note] Starting table crash recovery...
+2024-12-12 10:09:11 0 [Note] Crash table recovery finished.
+2024-12-12 10:09:11 0 [Note] InnoDB: Buffer pool(s) load completed at 241212 10:09:11
+2024-12-12 10:09:13 0 [Note] Server socket created on IP: '::'.
+2024-12-12 10:09:13 0 [Note] Server socket created on IP: '0.0.0.0'.
+2024-12-12 10:09:14 0 [Note] mysqld: Event Scheduler: Loaded 0 events
+2024-12-12 10:09:14 0 [Note] mariadb\bin\mysqld: ready for connections.
+Version: '11.5.2-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2024-12-12 15:36:25 8 [Warning] Aborted connection 8 to db: 'loopmart' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2024-12-12 21:32:18 13 [Warning] Aborted connection 13 to db: 'loopmart' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2024-12-12 21:32:18 16 [Warning] Aborted connection 16 to db: 'loopmart' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2024-12-12 21:32:18 14 [Warning] Aborted connection 14 to db: 'loopmart' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2024-12-12 22:48:13 0 [Note] Starting MariaDB 11.5.2-MariaDB source revision ea75a0b6009b0251e83193cd38c3974e36b65e06 server_uid V/lQBLHD+oMMYOdqRzDaVNiDT2Y= as process 7240
+2024-12-12 22:48:13 0 [Note] InnoDB: Compressed tables use zlib 1.3.1
+2024-12-12 22:48:13 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-12 22:48:13 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+2024-12-12 22:48:13 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-12 22:48:13 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-12 22:48:13 0 [Note] InnoDB: File system buffers for log disabled (block size=4096 bytes)
+2024-12-12 22:48:13 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=85040
+2024-12-12 22:48:13 0 [Note] InnoDB: End of log at LSN=93462
+2024-12-12 22:48:13 0 [Note] InnoDB: To recover: 26 pages
+2024-12-12 22:48:13 0 [Note] InnoDB: Opened 3 undo tablespaces
+2024-12-12 22:48:13 0 [Note] InnoDB: 128 rollback segments in 3 undo tablespaces are active.
+2024-12-12 22:48:13 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+2024-12-12 22:48:13 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-12 22:48:13 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-12 22:48:13 0 [Note] InnoDB: log sequence number 93462; transaction id 110
+2024-12-12 22:48:13 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-12 22:48:13 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\akier\Documents\GitHub\LoopMart\LoopMartAPP\mariadb\data\ib_buffer_pool
+2024-12-12 22:48:13 0 [Note] mysqld: SSPI: using principal name 'localhost', mech 'Negotiate'
+2024-12-12 22:48:13 0 [Note] InnoDB: Buffer pool(s) load completed at 241212 22:48:13
+2024-12-12 22:48:13 0 [Note] Recovering after a crash using tc.log
+2024-12-12 22:48:13 0 [Note] Starting table crash recovery...
+2024-12-12 22:48:13 0 [Note] Crash table recovery finished.
+2024-12-12 22:48:15 0 [Note] Server socket created on IP: '::'.
+2024-12-12 22:48:15 0 [Note] Server socket created on IP: '0.0.0.0'.
+2024-12-12 22:48:15 0 [Note] mysqld: Event Scheduler: Loaded 0 events
+2024-12-12 22:48:15 0 [Note] mariadb\bin\mysqld: ready for connections.
+Version: '11.5.2-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2024-12-13  9:04:08 0 [Note] Starting MariaDB 11.5.2-MariaDB source revision ea75a0b6009b0251e83193cd38c3974e36b65e06 server_uid V/lQBLHD+oMMYOdqRzDaVNiDT2Y= as process 27728
+2024-12-13  9:04:08 0 [Note] InnoDB: Compressed tables use zlib 1.3.1
+2024-12-13  9:04:08 0 [Note] InnoDB: Number of transaction pools: 1
+2024-12-13  9:04:08 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+2024-12-13  9:04:08 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+2024-12-13  9:04:08 0 [Note] InnoDB: Completed initialization of buffer pool
+2024-12-13  9:04:08 0 [Note] InnoDB: File system buffers for log disabled (block size=4096 bytes)
+2024-12-13  9:04:08 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=85040
+2024-12-13  9:04:08 0 [Note] InnoDB: End of log at LSN=148543
+2024-12-13  9:04:08 0 [Note] InnoDB: To recover: 99 pages
+2024-12-13  9:04:08 0 [Note] InnoDB: Opened 3 undo tablespaces
+2024-12-13  9:04:08 0 [Note] InnoDB: 128 rollback segments in 3 undo tablespaces are active.
+2024-12-13  9:04:08 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+2024-12-13  9:04:08 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+2024-12-13  9:04:08 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+2024-12-13  9:04:08 0 [Note] InnoDB: log sequence number 148543; transaction id 260
+2024-12-13  9:04:08 0 [Note] Plugin 'FEEDBACK' is disabled.
+2024-12-13  9:04:08 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\akier\Documents\GitHub\LoopMart\LoopMartAPP\mariadb\data\ib_buffer_pool
+2024-12-13  9:04:08 0 [Note] mysqld: SSPI: using principal name 'localhost', mech 'Negotiate'
+2024-12-13  9:04:08 0 [Note] Recovering after a crash using tc.log
+2024-12-13  9:04:08 0 [Note] Starting table crash recovery...
+2024-12-13  9:04:08 0 [Note] Crash table recovery finished.
+2024-12-13  9:04:08 0 [Note] InnoDB: Buffer pool(s) load completed at 241213  9:04:08
+2024-12-13  9:04:11 0 [Note] Server socket created on IP: '::'.
+2024-12-13  9:04:11 0 [Note] Server socket created on IP: '0.0.0.0'.
+2024-12-13  9:04:11 0 [Note] mysqld: Event Scheduler: Loaded 0 events
+2024-12-13  9:04:11 0 [Note] mariadb\bin\mysqld: ready for connections.
+Version: '11.5.2-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution

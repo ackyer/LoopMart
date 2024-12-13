@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market - LoopMart</title>
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html"><img src="images/LoopMartLogoNoBackground.png" alt="LoopMart Logo"></a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="market.html">Market</a></li>
+                <li>
+                    <a href="basket.html" class="basket-link">
+                        <span class="basket-text">Basket</span>
+                        <img src="images/carrito.png" alt="Basket" class="nav-icon">
+                    </a>
+                </li>
+                <li><a href="aboutus.html">About us</a> </li>
+                <li>
+                    <a href="account.html">
+                        <img src="images/user-icon.png" alt="User Icon" class="icon">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<main class="market-page">
+    <form class="search-bar" action="search-results.html" method="GET">
+        <input
+                type="text"
+                name="query"
+                placeholder="Search for products..."
+                aria-label="Search products"
+                required
+        >
+        <button type="submit">Search</button>
+    </form>
+    <section class="product-grid">
+        <!-- Item 1 -->
+        <div class="product-card">
+            <img src="images/product1.jpg" alt="Product 1">
+            <h2>Wireless Headphones</h2>
+            <p>$49.99</p>
+            <button class="button add-to-basket" data-id="1">Add to Basket</button>
+            <a href="product-details.html" class="button view-details">View Details</a>
+        </div>
+        <!-- Item 2 -->
+        <div class="product-card">
+            <img src="images/product2.png" alt="Product 2">
+            <h2>Smart Watch</h2>
+            <p>$89.99</p>
+            <button class="button add-to-basket" data-id="2">Add to Basket</button>
+            <a href="product-details.html" class="button view-details">View Details</a>
+        </div>
+        <!-- Item 3 -->
+        <div class="product-card">
+            <img src="images/product3.jpg" alt="Product 3">
+            <h2>Bluetooth Speaker</h2>
+            <p>$29.99</p>
+            <button class="button add-to-basket" data-id="3">Add to Basket</button>
+            <a href="product-details.html" class="button view-details">View Details</a>
+        </div>
+        <!-- Item 4 -->
+        <div class="product-card">
+            <img src="images/product4.jpg" alt="Product 4">
+            <h2>Gaming Mouse</h2>
+            <p>$39.99</p>
+            <button class="button add-to-basket" data-id="4">Add to Basket</button>
+            <a href="product-details.html" class="button view-details">View Details</a>
+        </div>
+        <!-- More items can be added here -->
+    </section>
+</main>
+
+<footer>
+    <p>Copyright © 2024 LoopMart</p>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.add-to-basket').forEach(button => {
+            button.addEventListener('click', () => {
+                const item_id = button.getAttribute('data-id');
+                console.log('Adding item to basket with ID:', item_id);
+
+                // Enviar el ID del producto al servidor
+                fetch('http://localhost/api/add_to_basket.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ item_id: item_id })
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Response from server:', data);
+                        if (data.success) {
+                            alert('Product added to basket!');
+                        } else if (data.error === 'not_logged_in') {
+                            alert('Please log in to add products to your basket.');
+                            window.location.href = "signin.html";
+                        } else {
+                            alert('Failed to add product.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            });
+        });
+    });
+
+</script>
+
+</body>
+</html>

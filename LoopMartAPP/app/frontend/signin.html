@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Parkoid</title>
+    <title>LoopMart - Sign in</title>
     <link href="css/styles.css" rel="stylesheet" />
     <style>
         #loader {
@@ -26,6 +26,7 @@
     <img src="images/loader.gif" style="width: 200px;"><br>
     <div style="display: inline-block">Data is loading ...</div>
 </div>
+
 
 <script>
     async function getAccountData() {
@@ -54,51 +55,68 @@
 
 <header>
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a> </li>
-            <li><a href="pricing.html">Pricing</a> </li>
-            <li><a class="active" href="signin.html">Sign in</a> </li>
-        </ul>
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html"><img src="images/LoopMartLogoNoBackground.png" alt="LoopMart Logo"></a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="market.html">Market</a></li>
+                <li>
+                    <a href="basket.html" class="basket-link">
+                        <span class="basket-text">Basket</span>
+                        <img src="images/carrito.png" alt="Basket" class="nav-icon">
+                    </a>
+                </li>
+                <li><a href="aboutus.html">About us</a> </li>
+                <li>
+                    <a  class="active-account" href="account.html">
+                        <img src="images/user-icon.png" alt="User Icon" class="icon">
+                    </a>
+                </li>
+            </ul>
+        </div>
     </nav>
 </header>
-<main>
-    <h1>Sign in</h1>
-    <div id="failed" class="failed">Sign in failed.</div>
-   <form>
-       <input class="input-first" type="email" id="username" name="username" placeholder="Email">
+<main class="main-signin">
+    <h1>Login</h1>
+    <div id="failed" class="failed">Login failed.</div>
+   <form class="sign-in-form">
+       <input class="input-first" type="email" id="email" name="email" placeholder="Email">
        <br>
        <input class="input-last" type="password" id="password" name="password" placeholder="Password">
        <br>
-       <button id="signin" class="button">Sign in</button>
+       <button id="signin" class="button">Login</button>
        <script>
 
            document.getElementById('signin').addEventListener('click',function (evt) {
                evt.preventDefault();
                console.log('sign in');
 
-               var username = document.getElementById('username').value;
+               var email = document.getElementById('email').value;
                var password = document.getElementById('password').value;
 
-               console.log(username, password);
+               console.log(email, password);
 
                async function getData() {
                    const url = "http://localhost/api/signin.php";
                    try {
                        const response = await fetch(url,  {
                            method: "POST",
-                           body: JSON.stringify({ username: username, password: password}),
+                           body: JSON.stringify({ email: email, password: password}),
                        });
                        if (!response.ok) {
                            throw new Error(`Response status: ${response.status}`);
                        }
 
                        const text_response = await response.text();
+                       console.log(text_response)
                        if(text_response == 'OK') {
                            window.location.href = "http://localhost/account.html";
                        } else {
                            //show error message
                            document.getElementById('failed').style.visibility = 'visible';
-                           document.getElementById('username').value = '';
+                           document.getElementById('email').value = '';
                            document.getElementById('password').value = '';
                        }
 
@@ -113,6 +131,10 @@
            })
        </script>
    </form>
+
+    <h2>You don't have an account?</h2>
+    <a class="signUp-button" href="signup.html">Sign up</a>
+
 </main>
 
 

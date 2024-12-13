@@ -1379,19 +1379,25 @@ loopmart|schema||loopmartuser||grant option|G</Grants>
       <Charset>utf8mb4</Charset>
     </collation>
     <schema id="510" parent="1" name="information_schema">
+      <LastIntrospectionLocalTimestamp>2024-12-11.12:59:52</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb3_general_ci</CollationName>
     </schema>
     <schema id="511" parent="1" name="loopmart">
-      <LastIntrospectionLocalTimestamp>2024-11-29.11:21:35</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-12-12.23:07:20</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_unicode_520_ci</CollationName>
     </schema>
     <schema id="512" parent="1" name="mysql">
+      <Grants>global_priv|||mariadb.sys|localhost|DELETE|G
+global_priv|||mariadb.sys|localhost|SELECT|G</Grants>
+      <LastIntrospectionLocalTimestamp>2024-12-11.12:59:55</LastIntrospectionLocalTimestamp>
       <CollationName>latin1_swedish_ci</CollationName>
     </schema>
     <schema id="513" parent="1" name="performance_schema">
+      <LastIntrospectionLocalTimestamp>2024-12-11.12:59:56</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb3_general_ci</CollationName>
     </schema>
     <schema id="514" parent="1" name="sys">
+      <LastIntrospectionLocalTimestamp>2024-12-11.12:59:56</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb3_general_ci</CollationName>
     </schema>
     <user id="515" parent="1" name="loopmartuser"/>
@@ -1410,13 +1416,154 @@ loopmart|schema||loopmartuser||grant option|G</Grants>
     <user id="520" parent="1" name="root">
       <Host>localhost</Host>
     </user>
-    <table id="521" parent="511" name="usuarios">
+    <table id="521" parent="511" name="basket">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_unicode_520_ci</CollationName>
     </table>
-    <column id="522" parent="521" name="usaername">
+    <table id="522" parent="511" name="item">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_520_ci</CollationName>
+    </table>
+    <table id="523" parent="511" name="user">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_520_ci</CollationName>
+    </table>
+    <column id="524" parent="521" name="buyer_id">
+      <NotNull>1</NotNull>
       <Position>1</Position>
-      <StoredType>varchar(10)|0s</StoredType>
+      <StoredType>int(11)|0s</StoredType>
     </column>
+    <column id="525" parent="521" name="item_id">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="526" parent="521" name="quantity">
+      <DefaultExpression>1</DefaultExpression>
+      <Position>3</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <foreign-key id="527" parent="521" name="basket_ibfk_1">
+      <ColNames>buyer_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>user_id</RefColNames>
+      <RefTableName>user</RefTableName>
+    </foreign-key>
+    <foreign-key id="528" parent="521" name="basket_ibfk_2">
+      <ColNames>item_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>item_id</RefColNames>
+      <RefTableName>item</RefTableName>
+    </foreign-key>
+    <index id="529" parent="521" name="PRIMARY">
+      <ColNames>buyer_id
+item_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="530" parent="521" name="item_id">
+      <ColNames>item_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="531" parent="521" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="532" parent="522" name="item_id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="533" parent="522" name="item_name">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(200)|0s</StoredType>
+    </column>
+    <column id="534" parent="522" name="description">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="535" parent="522" name="price">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>decimal(10,2 digit)|0s</StoredType>
+    </column>
+    <column id="536" parent="522" name="vendor_id">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="537" parent="522" name="date">
+      <DefaultExpression>current_timestamp()</DefaultExpression>
+      <Position>6</Position>
+      <StoredType>timestamp|0s</StoredType>
+    </column>
+    <foreign-key id="538" parent="522" name="item_ibfk_1">
+      <ColNames>vendor_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>user_id</RefColNames>
+      <RefTableName>user</RefTableName>
+    </foreign-key>
+    <index id="539" parent="522" name="PRIMARY">
+      <ColNames>item_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="540" parent="522" name="vendor_id">
+      <ColNames>vendor_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="541" parent="522" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="542" parent="523" name="user_id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="543" parent="523" name="name">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="544" parent="523" name="email">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(150)|0s</StoredType>
+    </column>
+    <column id="545" parent="523" name="password">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="546" parent="523" name="date">
+      <DefaultExpression>current_timestamp()</DefaultExpression>
+      <Position>5</Position>
+      <StoredType>timestamp|0s</StoredType>
+    </column>
+    <index id="547" parent="523" name="PRIMARY">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="548" parent="523" name="email">
+      <ColNames>email</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="549" parent="523" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="550" parent="523" name="email">
+      <UnderlyingIndexName>email</UnderlyingIndexName>
+    </key>
   </database-model>
 </dataSource>

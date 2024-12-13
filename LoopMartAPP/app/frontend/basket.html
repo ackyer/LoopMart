@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basket - LoopMart</title>
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html"><img src="images/LoopMartLogoNoBackground.png" alt="LoopMart Logo"></a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="market.html">Market</a></li>
+                <li>
+                    <a class="active" href="basket.html" class="basket-link">
+                        <span class="basket-text">Basket</span>
+                        <img src="images/carrito.png" alt="Basket" class="nav-icon">
+                    </a>
+                </li>
+                <li><a href="aboutus.html">About us</a> </li>
+                <li>
+                    <a href="account.html">
+                        <img src="images/user-icon.png" alt="User Icon" class="icon">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<main>
+    <section class="basket">
+        <h1>Your Basket</h1>
+        <div class="basket-items" id="basket-items">
+            <!-- Los artículos se cargan dinámicamente desde el backend -->
+        </div>
+        <!-- Total Price and Checkout -->
+        <div class="basket-summary">
+            <p>Total: <span class="total-price">$0.00</span></p>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>Copyright © 2024 LoopMart</p>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Cargar los elementos del carrito desde el backend
+        fetch('http://localhost/api/basket.php')
+            .then(response => response.json())
+            .then(data => {
+                if (data.error === 'not_logged_in') {
+                    alert('Please log in to view your basket.');
+                    window.location.href = 'signin.html';
+                    return;
+                }
+
+                const basketItemsContainer = document.getElementById('basket-items');
+                basketItemsContainer.innerHTML = ''; // Limpiar contenedor
+
+                data.basket_items.forEach(item => {
+                    const itemElement = `
+                        <div class="basket-item" data-id="${item.item_id}">
+                            <div class="item-info">
+                                <h2>${item.item_name}</h2>
+                                <p>$${item.price}</p>
+                            </div>
+                            <div class="item-quantity">
+                                <button class="quantity-btn decrease">-</button>
+                                <input type="number" class="quantity-input" value="${item.quantity}" min="1">
+                                <button class="quantity-btn increase">+</button>
+                            </div>
+                            <button class="remove-btn">Remove</button>
+                        </div>`;
+                    basketItemsContainer.innerHTML += itemElement;
+                });
+
+                // Mostrar el precio total en el resumen
+                const totalPriceElement = document.querySelector('.total-price');
+                totalPriceElement.textContent = `$${data.total_price.toFixed(2)}`;
+
+                // Agregar funcionalidad a los botones
+                attachEventListeners();
+            })
+            .catch(error => console.error('Error loading basket:', error));
+    });
+
+    function attachEventListeners() {
+        // Incrementar cantidad
+        document.querySelectorAll('.increase').forEach(button => {
+            button.addEventListener('click', event => {
+                const itemElement = event.target.closest('.basket-item');
+                const itemId = itemElement.getAttribute('data-id');
+                const input = itemElement.querySelector('.quantity-input');
+                input.value = parseInt(input.value) + 1;
+
+                updateQuantity(itemId, input.value);
+            });
+        });
+
+        // Decrementar cantidad
+        document.querySelectorAll('.decrease').forEach(button => {
+            button.addEventListener('click', event => {
+                const itemElement = event.target.closest('.basket-item');
+                const itemId = itemElement.getAttribute('data-id');
+                const input = itemElement.querySelector('.quantity-input');
+                if (parseInt(input.value) > 1) {
+                    input.value = parseInt(input.value) - 1;
+
+                    updateQuantity(itemId, input.value);
+                }
+            });
+        });
+
+        // Eliminar elemento
+        document.querySelectorAll('.remove-btn').forEach(button => {
+            button.addEventListener('click', event => {
+                const itemElement = event.target.closest('.basket-item');
+                const itemId = itemElement.getAttribute('data-id');
+
+                removeItem(itemId, itemElement);
+            });
+        });
+    }
+
+    function updateQuantity(itemId, newQuantity) {
+        fetch('http://localhost/api/update_quantity.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ item_id: itemId, quantity: newQuantity })
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    updateTotalPrice(); // Actualiza el precio total
+                } else {
+                    alert('Failed to update quantity.');
+                }
+            })
+            .catch(error => console.error('Error updating quantity:', error));
+    }
+
+    function removeItem(itemId, itemElement) {
+        fetch('http://localhost/api/remove_item.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ item_id: itemId })
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    itemElement.remove(); // Eliminar del DOM
+                    updateTotalPrice(); // Actualiza el precio total
+                } else {
+                    alert('Failed to remove item.');
+                }
+            })
+            .catch(error => console.error('Error removing item:', error));
+    }
+
+    function updateTotalPrice() {
+        fetch('http://localhost/api/basket.php')
+            .then(response => response.json())
+            .then(data => {
+                if (!data.error) {
+                    const totalPriceElement = document.querySelector('.total-price');
+                    totalPriceElement.textContent = `$${data.total_price.toFixed(2)}`;
+                }
+            })
+            .catch(error => console.error('Error updating total price:', error));
+    }
+</script>
+</body>
+</html>

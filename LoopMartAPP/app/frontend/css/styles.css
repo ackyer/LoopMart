@@ -14,7 +14,7 @@
 
 html {
     font-size: 16px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat Arabic', sans-serif;
 }
 
 body {
@@ -22,7 +22,7 @@ body {
 }
 
 header {
-    padding: 1rem 2rem;
+    padding: 0;
     background-color: #fff; /* Fondo opcional */
 }
 
@@ -32,7 +32,6 @@ header {
     justify-content: space-between; /* Alinea todo a la izquierda */
     gap: 0 2rem; /* Espaciado entre logo y menú */
     margin-top: -7rem;
-    margin-left: -1.5rem;
 }
 
 .logo {
@@ -42,6 +41,17 @@ header {
 
 .logo img {
     height: 350px; /* Tamaño grande del logo */
+    width: auto;
+    display: block;
+}
+
+.small-logo {
+    display: flex;
+    align-items: center;
+}
+
+.small-logo img {
+    height: 150px; /* Tamaño grande del logo */
     width: auto;
     display: block;
 }
@@ -63,6 +73,7 @@ li {
     border-bottom: 2px solid var(--primary-color);
 }
 
+
 nav li a {
     text-decoration: none;
     color: var(--primary-color);
@@ -79,35 +90,64 @@ nav li a:focus {
     color: #656565; /* Cambia el color al pasar el cursor */
 }
 
-main {
-    text-align: left;
+/* Estilo específico para la imagen */
+.nav-icon {
+    height: 15px; /* Tamaño de la imagen */
+    width: 15px; /* Mantén la proporción */
+    object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
 }
 
-h1 {
+/* Texto junto a la imagen */
+.basket-text {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    transition: color 0.2s ease; /* Efecto suave para el color */
+}
+
+/* Hover sobre el enlace completo */
+.basket-link:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    color: #656565; /* Cambia el color del texto */
+}
+
+/* Cambiar color del texto e imagen al hover */
+.basket-link:hover .basket-text {
+    color: #656565;
+}
+
+.basket-link:hover .nav-icon {
+    filter: brightness(0.8); /* Oscurece un poco la imagen */
+}
+
+
+
+
+.main-text {
     text-align: left;
     font-family: 'Montserrat Arabic', sans-serif;
     font-size: 4rem;
     font-weight: 500;
     width: fit-content;
     transform: scale(1.5);
-    margin: 3rem 0 0 7rem;
+    margin: 10rem 0 0 7rem;
     letter-spacing: -0.07em;
 }
 
 .buttonsMain {
     display: flex;
     flex-direction: row; /* Alinea los botones en una columna */
-    width: 100%; /* El contenedor ocupa todo el ancho */
-    margin-left: 3rem;
-    margin-right: 3rem;
-    margin-top: 2rem;
+    justify-content: center;
+    gap: 0;
+    width: 95%;
     padding: 0; /* Sin padding */
-    gap: 0.5rem;
+    margin-top: 3rem;
+    margin-left: 2rem;
 }
 
 .buttonsMain .button {
     display: block; /* Los botones ocupan toda la fila */
-    width: calc(100% - 6rem); /* Resta 2rem para margen a los lados */
+    width: calc(33% - 1rem); /* Resta 2rem para margen a los lados */
     margin: 0 auto; /* Centra los botones */
     padding: 1rem 0; /* Espaciado interno para hacer los botones más altos */
     text-align: center; /* Centra el texto dentro del botón */
@@ -118,6 +158,10 @@ h1 {
     border-radius: 0; /* Bordes rectos */
     box-shadow: none; /* Sin sombra */
     transition: background-color 0.3s ease, color 0.3s ease; /* Efecto suave */
+}
+
+.buttonsMain .button:not(:last-child) {
+    margin-right: 0.5rem; /* Espaciado entre botones */
 }
 
 .buttonsMain .button:hover {
@@ -132,7 +176,7 @@ a.button:hover {
 }
 
 footer p {
-    margin-top: 4rem;
+    margin-top: 2rem;
     color: #c5c5c5;
     font-size: 0.8rem;
     text-align: center;
@@ -151,11 +195,6 @@ input {
     padding: 1rem;
 }
 
-
-form {
-
-}
-
 .input-first {
     border-bottom: none;
     border-radius: 0.5rem 0.5rem 0 0;
@@ -171,3 +210,556 @@ form {
     margin-bottom: 0.5rem;
     visibility: hidden;
 }
+
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en una columna */
+    justify-content: space-between; /* Espacia los elementos verticalmente */
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: var(--white-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 350px; /* Ajusta la altura mínima para tarjetas */
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.product-card h2 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: var(--primary-color);
+}
+
+.product-card p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 0.5rem 0 1.5rem;
+}
+
+.product-card .button {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 0.5rem auto;
+}
+
+.product-card .button:hover {
+    background-color: #656565;
+    transform: scale(1.05);
+}
+.product-card .add-to-basket {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 0.5rem auto;
+}
+
+.product-card .add-to-basket:hover {
+    background-color: #656565;
+    transform: scale(1.05);
+}
+.product-card .button.view-details {
+    background: none; /* Sin fondo */
+    color: #555; /* Texto gris */
+    border: none; /* Sin borde */
+    box-shadow: none; /* Sin sombra */
+    padding: 0; /* Sin espaciado interno */
+    text-decoration: none; /* Sin subrayado predeterminado */
+    font-size: 1rem; /* Ajusta el tamaño de fuente */
+    display: inline-block; /* Se comporta como un enlace */
+    margin: 0.5rem auto; /* Margen vertical */
+    position: relative; /* Necesario para el subrayado */
+}
+
+/* Línea subrayada personalizada */
+.product-card .button.view-details::after {
+    content: ''; /* Crea el subrayado */
+    position: absolute;
+    left: 50%; /* Comienza en el centro del texto */
+    bottom: -2px; /* Espaciado debajo del texto */
+    width: 0; /* Comienza como una línea pequeña */
+    height: 0.5px; /* Grosor de la línea */
+    background-color: #555; /* Color de la línea */
+    transition: width 0.3s ease, left 0.3s ease; /* Transición suave */
+}
+
+/* Hover: línea visible y animada */
+.product-card .button.view-details:hover::after {
+    width: 100%; /* La línea se expande a lo largo del texto */
+    left: 0; /* La línea se alinea con el inicio del texto */
+}
+
+
+
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    max-width: 600px;
+    gap: 1rem; /* Espaciado entre input y botón */
+}
+
+.search-bar input {
+    flex: 1; /* Ocupar el espacio restante */
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+    height: 2.5rem; /* Asegura que el campo tenga la misma altura que el botón */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total */
+}
+
+.search-bar input:focus {
+    border-color: var(--primary-color); /* Cambia color al enfocar */
+}
+
+.search-bar button {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    height: 2.5rem; /* Igual altura que el input */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total */
+}
+
+.search-bar button:hover {
+    background-color: #656565;
+    transform: scale(1.05); /* Pequeño efecto al pasar el mouse */
+}
+
+.market-page {
+    margin-top: -8rem;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('../images/hero-background.jpg'); /* Ruta correcta */
+    background-size: cover; /* Cubre completamente la sección */
+    background-position: center; /* Centrado de la imagen */
+    background-repeat: no-repeat; /* No repite la imagen */
+    height: 70vh; /* Ocupa toda la altura de la ventana */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    display: flex; /* Centra contenido interno (opcional) */
+    align-items: center; /* Centra verticalmente (opcional) */
+    justify-content: center; /* Centra horizontalmente (opcional) */
+    color: white; /* Asegura que el texto sea legible */
+    text-align: center; /* Centra el texto */
+    margin-top: -7rem;
+}
+
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 0 auto;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+/* Features Section */
+.features {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 4.6rem;
+    margin-bottom: 5rem;
+}
+
+.features .feature {
+    margin-bottom: 3rem;
+}
+
+.feature h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.feature p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Feature Grid */
+.feature-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.feature-card {
+    background-color: var(--white-color);
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    max-width: 300px;
+    text-align: left;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.feature-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+/* General para los íconos de navegación */
+.icon {
+    height: 28px; /* Ajusta la altura del ícono */
+    width: 28px; /* Ajusta el ancho del ícono */
+    object-fit: contain; /* Asegura que la imagen mantenga sus proporciones */
+    vertical-align: middle; /* Alinea verticalmente con el texto */
+    position: relative;
+    top: -4px;
+}
+
+/* Añadir espacio entre ícono de usuario y el resto del menú */
+nav ul li:last-child {
+    margin-left: 1rem; /* Espaciado adicional a la izquierda del ícono */
+}
+
+/* Hover en el enlace que contiene el ícono */
+nav ul li a:hover .icon {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    filter: brightness(1.2); /* Aumenta el brillo del ícono */
+    transition: transform 0.2s ease, filter 0.2s ease; /* Efecto suave */
+}
+
+.main-signin {
+    position: absolute; /* Posición absoluta para centrar */
+    top: 50%; /* Mitad vertical */
+    left: 50%; /* Mitad horizontal */
+    transform: translate(-50%, -50%); /* Corrige el desbordamiento */
+    display: flex; /* Flexbox para el contenido interno */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem;
+    background-color: white; /* Asegúrate de que no haya cajas visibles */
+    border: none; /* Elimina cualquier borde que pudiera estar presente */
+    text-align: center;
+}
+
+.main-signin h1{
+    font-size: 4.5rem;
+}
+
+.main-signin h2 {
+    margin-top: 3rem;
+    font-size: 18px; /* Tamaño más pequeño para el título */
+    font-weight: bold; /* Mantiene el texto legible */
+    margin-bottom: 20px; /* Espaciado inferior si es necesario */
+}
+
+.main-signin .signUp-button {
+    font-size: 1rem;
+    color: gray; /* Cambia el color del texto a gris */
+    text-decoration: underline; /* Agrega una línea fina debajo */
+    text-underline-offset: 2px; /* Ajusta la separación de la línea */
+    text-decoration-thickness: 1.5px;
+    cursor: pointer; /* Cambia el cursor para resaltar que es clickeable */
+    border: none; /* Asegúrate de que no tenga bordes */
+    background: none; /* Quita fondos innecesarios */
+    padding: 0; /* Quita el padding */
+}
+
+.main-signin button {
+    margin-top: 3.5rem;
+    font-size: 20px; /* Tamaño de letra grande */
+    color: white; /* Color del texto negro */
+    border: 2px solid black; /* Borde negro con grosor */
+    border-radius: 2px; /* Bordes redondeados */
+    background-color: black; /* Fondo blanco */
+    padding: 10px 20px; /* Espaciado interno para agrandarlo */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    text-align: center; /* Centra el texto dentro del botón */
+    display: inline-block; /* Asegura que se comporte como un botón */
+    transition: all 0.3s ease; /* Transición suave para efectos hover */
+}
+
+.main-signin button:hover {
+    background-color: white; /* Fondo negro al pasar el mouse */
+    color: black; /* Texto blanco al pasar el mouse */
+}
+
+.sign-in-form{
+    margin-top: -2rem;
+}
+
+/* Styles specific to the profile page */
+.profile-page {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.profile-page h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.profile-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.profile-card img.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+
+.profile-card .profile-info {
+    text-align: left;
+    font-size: 16px;
+}
+
+.profile-card .profile-info p {
+    margin: 5px 0;
+}
+
+.profile-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.profile-actions button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.profile-actions button:hover {
+    background-color: white;
+    color: black;
+}
+
+.profile-actions .edit-button {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+
+.profile-actions .signout-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+}
+
+.profile-actions .signout-button:hover {
+    background-color: #f62929;
+    color: white;
+    border: black;
+}
+
+.basket {
+    max-width: 900px;
+    margin: -4rem auto 2rem;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.basket h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.basket-items {
+    margin-bottom: 20px;
+}
+
+.basket-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.basket-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px; /* Añade espacio entre la imagen y la información del producto */
+}
+
+.item-info {
+    flex: 1;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.item-info h2 {
+    font-size: 18px;
+    margin: 0;
+    color: #333;
+}
+
+.item-info p {
+    font-size: 16px;
+    color: #555;
+}
+
+.item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 2rem;
+}
+
+.quantity-btn {
+    width: 30px;
+    height: 30px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.quantity-input {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.quantity-btn:hover {
+    background-color: #ddd;
+}
+
+.basket-summary {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.basket-summary .total-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.checkout-btn {
+    margin-top: 10px;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    border: black solid 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.checkout-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.remove-btn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: 1px solid #f62929;
+    border-radius: 4px;
+    background-color: white;
+    color: #f62929;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background-color: #f62929;
+    color: white;
+}
+
